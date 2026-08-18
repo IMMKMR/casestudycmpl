@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sun King — COVANA Studio Case Study</title>
+  <meta name="description" content="Digital presence and growth strategy for Sun King by COVANA Studio."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #09090b;
+      --bg-dark-card: #151518;
+      --bg-light: #ffffff;
+      --bg-offwhite: #f5f6f8;
+      --text-main: #111417;
+      --text-light: #f4f6f8;
+      --text-gray-dark: #a0a8b2;
+      --text-gray-light: #525960;
+      --border-dark: #22272e;
+      --border-light: #e4e8eb;
+      --covana-orange: #ea5b18;
+      --brand-primary: #FFDA00; /* Sun King Pantone 108 C */
+      --brand-secondary: #002D72; /* Sun King Blue */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      font-family: 'Mulish', -apple-system, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Fixed Studio Header */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 2000;
+      height: 86px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 6%;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-gray-light);
+      font-size: 0.92rem;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+    }
+
+    .btn-contact {
+      background: var(--text-main);
+      color: #fff;
+      padding: 9px 22px;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .btn-contact:hover {
+      background: var(--covana-orange);
+    }
+
+    /* HERO */
+    .hero-container {
+      padding-top: 86px;
+      width: 100%;
+      background: var(--bg-dark);
+    }
+
+    .hero-visual {
+      position: relative;
+      width: 100%;
+      height: 78vh;
+      min-height: 560px;
+      max-height: 850px;
+      overflow: hidden;
+      background: var(--bg-dark);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .hero-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(9,9,11,0.98) 0%, rgba(9,9,11,0.5) 35%, rgba(9,9,11,0.1) 60%, rgba(0,0,0,0) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 50px 6%;
+    }
+
+    .hero-brand-title {
+      color: #ffffff;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    
+    .hero-brand-title span {
+      color: var(--brand-primary);
+    }
+
+    .hero-services {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #e0e6ed;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .sep-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      display: inline-block;
+    }
+
+    /* DARK OVERVIEW SECTION */
+    .dark-overview {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 60px 6% 90px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .overview-intro {
+      max-width: 900px;
+      margin-bottom: 60px;
+    }
+    
+    .overview-intro h2 {
+      font-size: clamp(2.3rem, 4vw, 3.2rem);
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+    
+    .overview-intro p {
+      font-size: 1.15rem;
+      color: var(--text-gray-dark);
+      line-height: 1.7;
+    }
+
+    .overview-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 56px;
+    }
+
+    .overview-col h3 {
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--brand-primary);
+      margin-bottom: 12px;
+    }
+    
+    .overview-col h4 {
+      color: #ffffff;
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .overview-col p {
+      color: var(--text-gray-dark);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* ASYMMETRICAL EDITORIAL COLLAGE */
+    .collage-showcase {
+      background: var(--bg-light);
+      padding: 100px 6%;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .sec-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--covana-orange);
+      margin-bottom: 12px;
+    }
+
+    .collage-header {
+      max-width: 820px;
+      margin-bottom: 64px;
+    }
+
+    .collage-header h2 {
+      font-size: clamp(2.3rem, 4vw, 3.2rem);
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .collage-header p {
+      color: var(--text-gray-light);
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    /* Editorial Split Row */
+    .editorial-split-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .editorial-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .color-block {
+      padding: 44px;
+      border-radius: 12px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .color-block.yellow {
+      background: var(--brand-primary);
+    }
+    
+    .color-block.yellow h3, .color-block.yellow p {
+      color: #111;
+    }
+
+    .color-block.blue {
+      background: var(--brand-secondary);
+    }
+
+    .color-block h3 {
+      font-size: 1.7rem;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+
+    .color-block p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      opacity: 0.94;
+    }
+
+    .img-box {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--bg-offwhite);
+      border: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .img-box img, .img-box video {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .img-box:hover img {
+      transform: scale(1.02);
+    }
+
+    .img-box.tall {
+      min-height: 500px;
+    }
+
+    .dual-grid, .triple-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .triple-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 90px;
+    }
+    
+    .video-box {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--border-light);
+      position: relative;
+    }
+    
+    .video-box video {
+      width: 100%;
+      max-height: 700px;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* THE IMPACT SECTION */
+    .impact-section {
+      background: var(--brand-primary);
+      padding: 100px 6% 120px;
+    }
+
+    .impact-inner {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .impact-top-line {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+      padding-bottom: 16px;
+      margin-bottom: 60px;
+    }
+
+    .impact-top-line h2 {
+      font-size: 1.4rem;
+      color: #111417;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 900;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px;
+    }
+
+    .impact-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .impact-metric {
+      font-size: clamp(3.5rem, 5vw, 5rem);
+      font-weight: 900;
+      color: #111417;
+      line-height: 1;
+      margin-bottom: 16px;
+      letter-spacing: -0.03em;
+    }
+    
+    .impact-metric span {
+      color: #111417;
+    }
+
+    .impact-card p {
+      color: rgba(17, 20, 23, 0.85);
+      font-size: 1.15rem;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--bg-dark);
+      padding: 40px 6% 60px;
+      border-top: 1px solid var(--border-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: var(--text-gray-dark);
+      font-size: 0.88rem;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    
+    @media (max-width: 1024px) {
+      .editorial-split-grid, .overview-grid {
+        grid-template-columns: 1fr;
+      }
+      .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .dual-grid, .triple-grid {
+        grid-template-columns: 1fr;
+      }
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Studio Header -->
+  <header class="navbar">
+    <a href="#" class="nav-logo">
+      <img src="covana-color.png" alt="COVANA Studio">
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#" class="nav-link">Work</a></li>
+      <li><a href="#" class="nav-link">Studio</a></li>
+      <li><a href="#" class="nav-link">Services</a></li>
+    </ul>
+    <a href="#" class="btn-contact">Let's Talk</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-container">
+    <div class="hero-visual">
+      <img src="Crreeatives/Rajkumar_rao_baby_wishing_post.jpg" alt="Rajkumar Rao TVC with Sun King" class="hero-img" />
+      <div class="hero-gradient-overlay">
+        <h1 class="hero-brand-title">Sun King <span>×</span> COVANA</h1>
+        <div class="hero-services">
+          <span>Brand Positioning</span>
+          <span class="sep-dot"></span>
+          <span>Messaging Strategy</span>
+          <span class="sep-dot"></span>
+          <span>Community Engagement</span>
+          <span class="sep-dot"></span>
+          <span>Performance Marketing</span>
+          <span class="sep-dot"></span>
+          <span>TVC Production</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenge Section -->
+  <section class="challenge-section" style="background: var(--bg-dark-card); color: var(--text-light); padding: 80px 6%; border-bottom: 1px solid var(--border-dark);">
+    <div class="overview-intro" style="max-width: 1400px; margin: 0 auto;">
+      <h2 style="font-size: clamp(2.3rem, 4vw, 3.2rem); color: #ffffff; margin-bottom: 16px;">The Challenge</h2>
+      <p style="font-size: 1.15rem; color: var(--text-gray-dark); line-height: 1.7; max-width: 900px;">Sun King wanted to build a stronger digital presence, engage rural audiences and drive awareness of its solar-powered solutions. We built Sun King's social presence from the ground up, combining brand positioning, a clear messaging platform, localized content, community engagement and performance marketing to turn its channels into a space for discovery, engagement and product conversations.</p>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="dark-overview">
+    <div class="overview-grid">
+      <div class="overview-col">
+        <h3>01 / The Message</h3>
+        <h4>Set the Scene with Sun King</h4>
+        <p>We moved communication beyond showcasing products to showing the moments, experiences and benefits they could enable. The platform became the foundation for Sun King's creative communication — from "Reliable Power in Your Hands" and "Lighting India, Seamlessly" to "Experience Sunlight Every Time!" and "Light That Uplifts You."</p>
+      </div>
+      <div class="overview-col">
+        <h3>02 / The Content Strategy</h3>
+        <h4>Building the Content Engine</h4>
+        <p>We built the content engine around three key content approaches: Localized Reels & Creatives, Product Education through Storytelling, and Real-User Testimonials & Demos.</p>
+      </div>
+      <div class="overview-col">
+        <h3>03 / The Growth Engine</h3>
+        <h4>Building Stronger Interaction</h4>
+        <p>We leveraged local influencers and developed a region-specific engagement strategy to build stronger audience interaction. Targeted media spends were used to boost reach and grow followers, supported by festival- and offer-led campaigns. <br><br><strong>Relevant content → More reach → More engagement → More people discovering Sun King → More product conversations</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Identity & Logo -->
+  <section class="collage-showcase" style="padding-bottom: 40px;">
+    <span class="sec-tagline">Brand Identity</span>
+    <div class="collage-header">
+      <h2>Logo Construction & Use</h2>
+      <p>The logo features two elements: a wordmark and the lion symbol in a strict horizontal lock-up. A core principle of the identity is <strong>"Let It Breathe"</strong>—the logo is always protected by an area of clear space (equivalent to one letter 's') that must remain clear of all other text and graphic elements.</p>
+    </div>
+
+    <div class="editorial-split-grid">
+      <div class="editorial-column">
+        <div class="color-block yellow" style="height: 100%;">
+          <h3 style="color: #111417;">Primary Palette</h3>
+          <p style="color: #333333;">The Sun King™ yellow (Pantone 108 C) represents the shining sun in all its majesty, brilliance and warmth. It is the colour of optimism and conveys a compelling sense of youthfulness and energy.</p>
+        </div>
+      </div>
+      <div class="editorial-column">
+        <div class="img-box" style="background: var(--bg-light); padding: 40px;">
+          <img src="logo.svg" alt="Sun King Logo" style="width: 70%; object-fit: contain;">
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 60px;"></div>
+    
+    <div class="collage-header">
+      <h2>Color Palette & Typography</h2>
+      <p>Our brand visual language is built on distinct, consistent elements that create an emotional connection with our audience.</p>
+    </div>
+
+    <div class="triple-grid">
+      <div class="color-block" style="background: #ffffff; border: 1px solid var(--border-light); color: var(--text-main);">
+        <h3 style="color: var(--text-main);">Secondary: White</h3>
+        <p style="color: var(--text-gray-light);">Used for clean, uncluttered backgrounds allowing the primary yellow to shine.</p>
+      </div>
+      <div class="color-block" style="background: #231f20; color: #ffffff;">
+        <h3>Secondary: Black</h3>
+        <p style="color: var(--text-gray-dark);">A rich black (R:35 G:31 B:32) used for primary typography and strong contrast elements.</p>
+      </div>
+      <div class="color-block" style="background: #939598; color: #ffffff;">
+        <h3>Secondary: Grey</h3>
+        <p style="color: #f4f6f8;">A soft grey (R:147 G:149 B:152) used sparingly to support communication hierarchy.</p>
+      </div>
+    </div>
+
+    <div class="editorial-split-grid">
+      <div class="editorial-column">
+        <div class="color-block" style="background: var(--bg-dark-card); height: 100%;">
+          <h3>Primary Font: Akzidenz Grotesk</h3>
+          <p>Akzidenz Grotesk is used for all copy from headlines to main content. All headlines must be in uppercase, whereas body copy must appear in lowercase.</p>
+          <div style="margin-top: 24px; font-family: sans-serif; opacity: 0.7;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 8px; color: #ffffff;">Aa</h1>
+            <p style="font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p style="font-size: 0.9rem; letter-spacing: 2px;">abcdefghijklmnopqrstuvwxyz</p>
+            <p style="font-size: 0.9rem; letter-spacing: 2px;">1234567890</p>
+          </div>
+        </div>
+      </div>
+      <div class="editorial-column">
+        <div class="color-block" style="background: var(--bg-offwhite); border: 1px solid var(--border-light); height: 100%;">
+          <h3 style="color: var(--text-main);">Brand Voice</h3>
+          <p style="color: var(--text-gray-light); margin-bottom: 20px;">We speak proudly, but not boastfully to convey confidence and instill trust. Sun King™ speaks less like a company and more like a real person.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <span style="background: var(--brand-primary); color: #111; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">Approachable</span>
+            <span style="background: var(--brand-primary); color: #111; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">Trustworthy</span>
+            <span style="background: var(--brand-primary); color: #111; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">Innovative</span>
+            <span style="background: var(--brand-primary); color: #111; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">Open</span>
+            <span style="background: var(--brand-primary); color: #111; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">Elegant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creatives Showcase -->
+  <section class="collage-showcase" style="padding-top: 40px;">
+
+    <!-- Product Showcase Grid -->
+    <div class="editorial-split-grid">
+      <div class="editorial-column">
+        <div class="color-block yellow">
+          <h3>Product Education</h3>
+          <p>Products were introduced through stories and content that made their benefits easier to understand. Real experiences brought Sun King's solar-powered solutions to life.</p>
+        </div>
+        <div class="img-box">
+          <img src="Crreeatives/50-W-AC-Led-Lamp.jpg" alt="50W AC LED Lamp" />
+        </div>
+      </div>
+      <div class="editorial-column">
+        <div class="img-box tall">
+          <img src="Crreeatives/Inverter Bulb.jpg" alt="Inverter Bulb Showcase" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Triple Grid -->
+    <div class="triple-grid">
+      <div class="img-box">
+        <img src="Crreeatives/All-in-One-Solar-Solution.png" alt="All in one solar solution" />
+      </div>
+      <div class="img-box">
+        <img src="Crreeatives/solar-panel.jpg" alt="Solar Panel" />
+      </div>
+      <div class="img-box">
+        <img src="Crreeatives/lamp.jpg" alt="Sun King Lamp" />
+      </div>
+    </div>
+    
+    <div style="height: 60px;"></div>
+
+    <div class="collage-header">
+      <h2>Localized Reels & Creatives</h2>
+      <p>Content adapted to the audience and regional context, helping Sun King feel closer to the people it wanted to reach.</p>
+    </div>
+
+    <!-- Festive Dual Grid -->
+    <div class="dual-grid">
+      <div class="img-box">
+        <img src="Crreeatives/Independence-Day-2.jpg" alt="Independence Day Campaign" />
+      </div>
+      <div class="img-box">
+        <img src="Crreeatives/Happy-Pongal.jpg" alt="Pongal Campaign" />
+      </div>
+      <div class="img-box">
+        <img src="Crreeatives/Raksha-Bandhan.jpg" alt="Raksha Bandhan Campaign" />
+      </div>
+      <div class="img-box">
+        <img src="Crreeatives/Children_s-Day.jpg" alt="Childrens Day Campaign" />
+      </div>
+    </div>
+
+    <div style="height: 60px;"></div>
+
+    <span class="sec-tagline">04 / The Brand Film</span>
+    <div class="collage-header">
+      <h2>Taking "Set the Scene" to the Big Screen</h2>
+      <p>To take Sun King's story beyond social, Covana conceptualised and executed a celebrity-led TVC end-to-end — from concept and scripting to production — with Rajkummar Rao. The film brought the brand's promise into everyday life, showing how Sun King lighting can create moments of warmth, safety and progress.</p>
+    </div>
+    
+    <!-- Video Showcase Grid -->
+    <div class="video-grid">
+      <div class="video-box">
+        <video autoplay loop muted playsinline controls>
+          <source src="Crreeatives/Post_02_Branding.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Impact Section -->
+  <section class="impact-section">
+    <div class="impact-inner">
+      <div class="impact-top-line">
+        <h2>The Impact</h2>
+      </div>
+      
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-metric">5K<span>+</span></div>
+          <p>Instagram followers gained in just 6 months, building a solid foundation from zero.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-metric">1M<span>+</span></div>
+          <p>Views across top-performing reels, maximizing product visibility and reach.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-metric">3×</div>
+          <p>Industry-average engagement rate achieved for rural D2C brands.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-metric">↑</div>
+          <p>Significant increase in direct product enquiries via Instagram.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <h3 style="font-size: 1.2rem;">COVANA<span style="color: var(--covana-orange)">.</span></h3>
+      <span>© 2026 COVANA Studio. All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      <a href="#" style="margin-left: 20px; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-gray-dark)'">LinkedIn</a>
+      <a href="#" style="margin-left: 20px; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-gray-dark)'">Instagram</a>
+      <a href="#" style="margin-left: 20px; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--text-gray-dark)'">Twitter</a>
+    </div>
+  </footer>
+
+</body>
+</html>
