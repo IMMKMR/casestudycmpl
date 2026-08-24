@@ -53,56 +53,26 @@
 
     /* Fixed Studio Header */
     .navbar {
+    .header {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
+      right: 0;
       background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-light);
       z-index: 2000;
       height: 86px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 0 6%;
+      padding: 24px 6vw;
     }
 
-    .nav-logo img {
-      height: 48px;
-      width: auto;
-      display: block;
-    }
-
-    .nav-menu {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-
-    .nav-link {
-      color: var(--text-gray-light);
-      font-size: 0.92rem;
-      font-weight: 700;
-      transition: color 0.2s;
-    }
-
-    .nav-link:hover {
-      color: var(--text-main);
-    }
-
-    .btn-contact {
-      background: var(--text-main);
-      color: #fff;
-      padding: 9px 22px;
-      border-radius: 4px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      transition: all 0.2s;
-    }
-
-    .btn-contact:hover {
-      background: var(--covana-orange);
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
     }
 
     /* HERO */
@@ -477,16 +447,8 @@
 <body>
 
   <!-- Studio Header -->
-  <header class="navbar">
-    <a href="#" class="nav-logo">
-      <img src="covana-color.png" alt="COVANA Studio">
-    </a>
-    <ul class="nav-menu">
-      <li><a href="#" class="nav-link">Work</a></li>
-      <li><a href="#" class="nav-link">Studio</a></li>
-      <li><a href="#" class="nav-link">Services</a></li>
-    </ul>
-    <a href="#" class="btn-contact">Let's Talk</a>
+  <header class="header">
+    <div class="logo">COVANA<span style="color: var(--covana-orange)">.</span></div>
   </header>
 
   <!-- Hero Section -->
