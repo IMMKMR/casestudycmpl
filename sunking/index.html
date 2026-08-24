@@ -466,8 +466,20 @@
       -ms-overflow-style: none;
       width: 100%;
     }
+    .carousel-container {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.4) transparent;
+    }
     .carousel-container::-webkit-scrollbar {
-      display: none;
+      display: block;
+      height: 6px;
+    }
+    .carousel-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .carousel-container::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.5);
+      border-radius: 4px;
     }
     .carousel-item {
       scroll-snap-align: start;
@@ -720,9 +732,11 @@
   <!-- Creatives Showcase -->
   <section class="collage-showcase" style="padding-top: 40px;">
 
-    <!-- Product Showcase Grid -->
-    <div class="editorial-split-grid">
-      <div class="editorial-column">
+    <!-- Product Education Masonry Layout -->
+    <div class="mosaic-flex-grid">
+      
+      <!-- Column 1 -->
+      <div class="mosaic-col">
         <div class="color-block yellow">
           <h3>Product Education</h3>
           <p>Products were introduced through stories and content that made their benefits easier to understand. Real experiences brought Sun King's solar-powered solutions to life.</p>
@@ -730,13 +744,24 @@
         <div class="img-box">
           <img src="Crreeatives/50-W-AC-Led-Lamp.jpg" alt="50W AC LED Lamp" />
         </div>
+        <div class="img-box">
+          <img src="Crreeatives/All-in-One-Solar-Solution.png" alt="All in one solar solution" />
+        </div>
       </div>
-      <div class="editorial-column">
+      
+      <!-- Column 2 -->
+      <div class="mosaic-col">
         <div class="img-box tall">
           <img src="Crreeatives/Inverter Bulb.jpg" alt="Inverter Bulb Showcase" />
         </div>
-        
-        <!-- Seamless Carousel Post merged with Product Education -->
+        <div class="img-box">
+          <img src="Crreeatives/solar-panel.jpg" alt="Solar Panel" />
+        </div>
+      </div>
+      
+      <!-- Column 3 -->
+      <div class="mosaic-col">
+        <!-- Seamless Carousel Post -->
         <div class="carousel-post-wrapper">
           <div class="carousel-container">
             <div class="carousel-item">
@@ -754,20 +779,11 @@
           </div>
           <div class="swipe-hint">Swipe ➔</div>
         </div>
+        <div class="img-box">
+          <img src="Crreeatives/lamp.jpg" alt="Sun King Lamp" />
+        </div>
       </div>
-    </div>
-
-    <!-- Product Triple Grid -->
-    <div class="triple-grid">
-      <div class="img-box">
-        <img src="Crreeatives/All-in-One-Solar-Solution.png" alt="All in one solar solution" />
-      </div>
-      <div class="img-box">
-        <img src="Crreeatives/solar-panel.jpg" alt="Solar Panel" />
-      </div>
-      <div class="img-box">
-        <img src="Crreeatives/lamp.jpg" alt="Sun King Lamp" />
-      </div>
+      
     </div>
     
     <div style="height: 60px;"></div>
