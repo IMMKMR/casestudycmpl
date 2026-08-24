@@ -342,6 +342,10 @@
       object-fit: contain;
       border: none;
     }
+    
+    .mobile-video {
+      display: none !important;
+    }
 
     /* THE IMPACT SECTION */
     .impact-section {
@@ -544,6 +548,20 @@
     }
 
     @media (max-width: 768px) {
+      .hero-visual {
+        height: auto;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .hero-gradient-overlay {
+        position: relative;
+        background: var(--bg-dark);
+        padding: 30px 6% 40px;
+      }
+      .hero-brand-title {
+        font-size: clamp(1.8rem, 8vw, 3rem);
+      }
       .dual-grid, .triple-grid {
         grid-template-columns: 1fr;
       }
@@ -563,6 +581,15 @@
       .carousel-dots .dot {
         width: 8px;
         height: 8px;
+      }
+      .video-box video, .video-box iframe {
+        min-height: 250px;
+      }
+      .desktop-video {
+        display: none !important;
+      }
+      .mobile-video {
+        display: block !important;
       }
     }
   </style>
@@ -677,9 +704,9 @@
           <p>Akzidenz Grotesk is used for all copy from headlines to main content. All headlines must be in uppercase, whereas body copy must appear in lowercase.</p>
           <div style="margin-top: 24px; font-family: sans-serif; opacity: 0.7;">
             <h1 style="font-size: 2.5rem; margin-bottom: 8px; color: #ffffff;">Aa</h1>
-            <p style="font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-            <p style="font-size: 0.9rem; letter-spacing: 2px;">abcdefghijklmnopqrstuvwxyz</p>
-            <p style="font-size: 0.9rem; letter-spacing: 2px;">1234567890</p>
+            <p style="font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; word-break: break-all;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p style="font-size: 0.9rem; letter-spacing: 2px; word-break: break-all;">abcdefghijklmnopqrstuvwxyz</p>
+            <p style="font-size: 0.9rem; letter-spacing: 2px; word-break: break-all;">1234567890</p>
           </div>
         </div>
       </div>
@@ -729,8 +756,12 @@
     </div>
     <div class="video-grid" style="margin-bottom: 20px;">
       <div class="video-box">
-        <video autoplay loop muted playsinline controls>
+        <video autoplay loop muted playsinline controls class="desktop-video">
           <source src="Sunking_X_Covana_web.m4v" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video autoplay loop muted playsinline controls class="mobile-video">
+          <source src="Sunking_X_Covana16X9_web.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -763,6 +794,34 @@
         </div>
         <div class="img-box">
           <img src="Crreeatives/Addressing-Dealers.jpg" alt="Addressing Dealers 2" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="impact-section">
+    <div class="impact-inner">
+      <div class="impact-top-line">
+        <h2>The Impact</h2>
+      </div>
+      
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-metric">5K<span>+</span></div>
+          <p>Instagram followers gained in just 6 months, building a solid foundation from zero.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-metric">1M<span>+</span></div>
+          <p>Views across top-performing reels, maximizing product visibility and reach.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-metric">3×</div>
+          <p>Industry-average engagement rate achieved for rural D2C brands.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-metric">↑</div>
+          <p>Significant increase in direct product enquiries via Instagram.</p>
         </div>
       </div>
     </div>
@@ -859,33 +918,7 @@
 
   </section>
 
-  <!-- Impact Section -->
-  <section class="impact-section">
-    <div class="impact-inner">
-      <div class="impact-top-line">
-        <h2>The Impact</h2>
-      </div>
-      
-      <div class="impact-grid">
-        <div class="impact-card">
-          <div class="impact-metric">5K<span>+</span></div>
-          <p>Instagram followers gained in just 6 months, building a solid foundation from zero.</p>
-        </div>
-        <div class="impact-card">
-          <div class="impact-metric">1M<span>+</span></div>
-          <p>Views across top-performing reels, maximizing product visibility and reach.</p>
-        </div>
-        <div class="impact-card">
-          <div class="impact-metric">3×</div>
-          <p>Industry-average engagement rate achieved for rural D2C brands.</p>
-        </div>
-        <div class="impact-card">
-          <div class="impact-metric">↑</div>
-          <p>Significant increase in direct product enquiries via Instagram.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Footer -->
   <footer class="footer">
