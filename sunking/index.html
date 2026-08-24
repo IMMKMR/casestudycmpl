@@ -550,8 +550,19 @@
       .impact-grid {
         grid-template-columns: 1fr;
       }
+      .mosaic-flex-grid {
+        gap: 16px;
+      }
       .mosaic-col {
         flex: 1 1 100%;
+        gap: 16px;
+      }
+      .carousel-nav {
+        display: none; /* Hide arrows on mobile, users can swipe naturally */
+      }
+      .carousel-dots .dot {
+        width: 8px;
+        height: 8px;
       }
     }
   </style>
