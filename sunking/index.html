@@ -433,20 +433,21 @@
       }
     }
     
-    /* Masonry Grid */
-    .masonry-grid {
-      column-count: 3;
-      column-gap: 24px;
+    /* Mosaic Flex Grid (Guarantees Column Balancing) */
+    .mosaic-flex-grid {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
     }
-    .masonry-grid > .img-box {
-      margin-bottom: 24px;
-      break-inside: avoid;
-      display: block; /* Overrides flex stretching */
+    .mosaic-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
     }
-    .masonry-grid > .img-box img {
+    .mosaic-col .img-box {
+      margin: 0;
       width: 100%;
-      height: auto;
-      display: block;
     }
 
     /* Carousel */
@@ -469,8 +470,11 @@
     }
     
     @media (max-width: 1024px) {
-      .masonry-grid {
-        column-count: 2;
+      .mosaic-flex-grid {
+        flex-wrap: wrap;
+      }
+      .mosaic-col {
+        flex: 1 1 calc(50% - 12px);
       }
     }
 
@@ -480,6 +484,9 @@
       }
       .impact-grid {
         grid-template-columns: 1fr;
+      }
+      .mosaic-col {
+        flex: 1 1 100%;
       }
     }
   </style>
@@ -659,21 +666,32 @@
       <p>Continuing the star-powered narrative across digital touchpoints and dealer networks.</p>
     </div>
     
-    <div class="masonry-grid" style="margin-bottom: 0;">
-      <div class="img-box">
-        <img src="Crreeatives/Ad-creative_01.jpg" alt="Ad Creative 1" />
+    <div class="mosaic-flex-grid" style="margin-bottom: 0;">
+      <!-- Column 1 -->
+      <div class="mosaic-col">
+        <div class="img-box">
+          <img src="Crreeatives/Ad-creative_01.jpg" alt="Ad Creative 1" />
+        </div>
+        <div class="img-box">
+          <img src="Crreeatives/Ad-creative_03.jpg" alt="Ad Creative 3" />
+        </div>
       </div>
-      <div class="img-box">
-        <img src="Crreeatives/Ad-creative_02.jpg" alt="Ad Creative 2" />
+      
+      <!-- Column 2 -->
+      <div class="mosaic-col">
+        <div class="img-box">
+          <img src="Crreeatives/Ad-creative_02.jpg" alt="Ad Creative 2" />
+        </div>
+        <div class="img-box">
+          <img src="Crreeatives/Addressing-Dealers.jpg" alt="Addressing Dealers 2" />
+        </div>
       </div>
-      <div class="img-box">
-        <img src="Crreeatives/Ad-creative_03.jpg" alt="Ad Creative 3" />
-      </div>
-      <div class="img-box">
-        <img src="Crreeatives/Addressing-Dealers-01.jpg" alt="Addressing Dealers 1" />
-      </div>
-      <div class="img-box">
-        <img src="Crreeatives/Addressing-Dealers.jpg" alt="Addressing Dealers 2" />
+      
+      <!-- Column 3 -->
+      <div class="mosaic-col">
+        <div class="img-box">
+          <img src="Crreeatives/Addressing-Dealers-01.jpg" alt="Addressing Dealers 1" />
+        </div>
       </div>
     </div>
   </section>
