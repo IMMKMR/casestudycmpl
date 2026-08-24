@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 427.85 339.43">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="459.86" y1="298.94" x2="263.28" y2="196.1" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0089cf"/>
+      <stop offset=".46" stop-color="#28a08a"/>
+      <stop offset=".82" stop-color="#45b15a"/>
+      <stop offset="1" stop-color="#50b848"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="22.64" y1="61.75" x2="229.71" y2="195.37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0061af"/>
+      <stop offset="1" stop-color="#0089cf"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="192.93" y1="243.3" x2="261.18" y2="111.22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#005221"/>
+      <stop offset="1" stop-color="#0aa245"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-3" d="M187.82,219.41c0-66.28,53.73-120.02,120.02-120.02s120.02,53.73,120.02,120.02-53.73,120.02-120.02,120.02-120.02-53.73-120.02-120.02ZM307.83,281.74c34.43,0,62.34-27.91,62.34-62.34s-27.91-62.34-62.34-62.34-62.34,27.91-62.34,62.34,27.91,62.34,62.34,62.34Z"/>
+    <path class="cls-1" d="M0,132.91C0,59.51,59.51,0,132.91,0s132.91,59.51,132.91,132.91-59.51,132.91-132.91,132.91S0,206.32,0,132.91ZM132.91,207.51c41.2,0,74.6-33.4,74.6-74.6s-33.4-74.6-74.6-74.6-74.6,33.4-74.6,74.6,33.4,74.6,74.6,74.6Z"/>
+    <path class="cls-2" d="M250.5,194.91c.89-2.09,1.91-4.11,3.02-6.08,7.9-17,12.31-35.94,12.31-55.92,0-8.56-.82-16.94-2.37-25.05-44.32,17.65-75.65,60.93-75.65,111.54,0,11.25,1.55,22.13,4.44,32.46,24.86-12.43,45.28-32.41,58.24-56.95Z"/>
+  </g>
+</svg>

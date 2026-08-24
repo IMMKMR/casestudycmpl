@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+    <!-- Background Grid Pattern -->
+    <pattern id="draft-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="#f4f7fa"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e3ecf5" stroke-width="1"/>
+    </pattern>
+    <pattern id="draft-grid-major" width="200" height="200" patternUnits="userSpaceOnUse">
+      <rect width="200" height="200" fill="url(#draft-grid)"/>
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#cfdeed" stroke-width="1.5"/>
+    </pattern>
+
+    <!-- Gradients for Lenses & Letterforms -->
+    <linearGradient id="leafLensGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6488a5" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#3d566e" stop-opacity="0.45"/>
+    </linearGradient>
+    
+    <linearGradient id="synergyLensGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a8bc" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#cbd5e1" stop-opacity="0.35"/>
+    </linearGradient>
+
+    <linearGradient id="letterFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#f0f4f8" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="700" fill="url(#draft-grid-major)" stroke="#cbd5e0" stroke-width="2"/>
+
+  <!-- Horizontal & Vertical Construction Guides -->
+  <line x1="50" y1="120" x2="1150" y2="120" stroke="#cbd5e0" stroke-dasharray="6 6" stroke-width="1.5"/>
+  <line x1="50" y1="560" x2="1150" y2="560" stroke="#cbd5e0" stroke-dasharray="6 6" stroke-width="1.5"/>
+  <line x1="50" y1="340" x2="1150" y2="340" stroke="#e0e8f0" stroke-dasharray="4 4" stroke-width="1"/>
+  
+  <!-- Diagonal Projection Guides for 'A' -->
+  <line x1="500" y1="650" x2="920" y2="40" stroke="#a0aec0" stroke-dasharray="8 6" stroke-width="1.5"/>
+  <line x1="1140" y1="650" x2="740" y2="40" stroke="#a0aec0" stroke-dasharray="8 6" stroke-width="1.5"/>
+
+  <!-- LETTERFORM OUTLINES (B, C, A) -->
+  <g id="letterforms">
+    <!-- Letter B -->
+    <path d="M 140 120 
+             L 330 120 
+             C 410 120, 430 200, 410 270
+             C 395 320, 360 330, 340 335
+             C 390 345, 450 370, 440 450
+             C 430 530, 380 560, 320 560
+             L 190 560
+             C 150 560, 140 520, 140 480
+             Z
+             M 220 200 L 290 200 C 330 200, 340 260, 300 270 L 220 270 Z
+             M 220 370 L 310 370 C 350 370, 360 470, 300 470 L 220 470 Z" 
+          fill="url(#letterFill)" stroke="#2d3748" stroke-width="2.5" stroke-linejoin="round" fill-rule="evenodd"/>
+
+    <!-- Letter C (Overlapping with B & A) -->
+    <path d="M 670 200 
+             C 570 110, 380 160, 370 340
+             C 360 520, 570 570, 670 480
+             L 640 410
+             C 570 470, 460 440, 460 340
+             C 460 240, 570 210, 640 270
+             Z" 
+          fill="url(#letterFill)" stroke="#2d3748" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Letter A (Upward Arrow / Leaf Frame) -->
+    <path d="M 830 120 
+             L 1090 560 
+             L 970 560 
+             C 940 480, 910 440, 870 440
+             C 810 440, 770 470, 730 560
+             L 570 560
+             Z
+             M 830 240 L 760 390 C 800 380, 850 380, 900 390 Z" 
+          fill="url(#letterFill)" stroke="#2d3748" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- WIREFRAME CONSTRUCTION CIRCLES -->
+  <g id="geometry-circles">
+    <!-- C1: Lower B/C Synergy Intersection Circle -->
+    <circle cx="350" cy="440" r="160" stroke="#718096" stroke-width="2" stroke-dasharray="10 8" fill="none"/>
+    
+    <!-- C2: Primary C Arc Circle -->
+    <circle cx="530" cy="320" r="190" stroke="#718096" stroke-width="2" stroke-dasharray="10 8" fill="none"/>
+    
+    <!-- C3: Agriscience Leaf Arc Left Tangent -->
+    <circle cx="700" cy="480" r="150" stroke="#718096" stroke-width="2" stroke-dasharray="10 8" fill="none"/>
+    
+    <!-- C4: Right Arrow Loop Circle -->
+    <circle cx="890" cy="460" r="140" stroke="#a0aec0" stroke-width="1.5" stroke-dasharray="6 6" fill="none"/>
+  </g>
+
+  <!-- SHADED INTERSECTION LENSES (HIGHLIGHTS) -->
+  <g id="intersection-highlights">
+    <!-- Synergy Lens between lower B and outer C -->
+    <path d="M 360 310 C 440 330, 470 460, 410 550 C 330 520, 290 410, 360 310 Z" 
+          fill="url(#synergyLensGrad)" stroke="#4a5d6e" stroke-width="1.8"/>
+
+    <!-- Agriscience Leaf Motif between C and inner slope of A -->
+    <path d="M 570 560 C 620 440, 730 390, 810 410 C 760 500, 670 580, 570 560 Z" 
+          fill="url(#leafLensGrad)" stroke="#2b3b4d" stroke-width="2.2"/>
+  </g>
+
+  <!-- ARCHITECTURAL DRAFTING ACCENTS & ANNOTATIONS -->
+  <g id="drafting-labels">
+    <!-- Center Point C1 -->
+    <g transform="translate(350, 440)">
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#ea5b18" stroke-width="1.5"/>
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#ea5b18" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3.5" fill="#ea5b18"/>
+      <text x="16" y="20" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="bold" fill="#ea5b18" letter-spacing="1">C1: R160 (SYNERGY LOOP)</text>
+    </g>
+
+    <!-- Center Point C2 -->
+    <g transform="translate(530, 320)">
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#008be3" stroke-width="1.5"/>
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#008be3" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3.5" fill="#008be3"/>
+      <text x="16" y="-12" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="bold" fill="#008be3" letter-spacing="1">C2: R190 (HARMONY ARC)</text>
+    </g>
+
+    <!-- Center Point C3 (Leaf Motif) -->
+    <g transform="translate(700, 480)">
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#10b865" stroke-width="1.5"/>
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#10b865" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="3.5" fill="#10b865"/>
+      <text x="16" y="20" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="bold" fill="#10b865" letter-spacing="1">C3: R150 (LEAF TANGENT)</text>
+    </g>
+
+    <!-- Apex Angle Callout -->
+    <g transform="translate(830, 110)">
+      <circle cx="0" cy="10" r="4" fill="#2d3748"/>
+      <text x="-60" y="-12" font-family="Consolas, 'Courier New', monospace" font-size="13" font-weight="bold" fill="#2d3748" letter-spacing="1">62.5° APEX (PROGRESS TRAJECTORY)</text>
+    </g>
+
+    <!-- Baseline Labels -->
+    <text x="60" y="112" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="600" fill="#718096" letter-spacing="1">CAPLINE (Y: 120)</text>
+    <text x="60" y="552" font-family="Consolas, 'Courier New', monospace" font-size="11" font-weight="600" fill="#718096" letter-spacing="1">BASELINE (Y: 560)</text>
+  </g>
+
+  <!-- STUDIO SPECIFICATION HEADER (Top-Left) -->
+  <g transform="translate(60, 60)">
+    <text x="0" y="0" font-family="Arial, -apple-system, sans-serif" font-size="20" font-weight="900" fill="#15191e" letter-spacing="3">BHARAT CERTIS AGRISCIENCE (BCA)</text>
+    <text x="0" y="22" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="700" fill="#64748b" letter-spacing="1.5">LOGOTYPE ARCHITECTURAL WIREFRAME &amp; PROPORTIONAL GEOMETRY</text>
+  </g>
+
+  <!-- STUDIO STAMP (Bottom-Right) -->
+  <g transform="translate(880, 610)">
+    <rect width="270" height="56" fill="#15191e" rx="6" shadow="0 4px 12px rgba(0,0,0,0.1)"/>
+    <text x="20" y="25" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#ea5b18" font-weight="800" letter-spacing="2">COVANA STUDIO ARCHITECTURE</text>
+    <text x="20" y="44" font-family="Arial, -apple-system, sans-serif" font-size="12" fill="#ffffff" font-weight="700" letter-spacing="0.8">VECTOR GEOMETRY SPECIFICATION</text>
+  </g>
+</svg>

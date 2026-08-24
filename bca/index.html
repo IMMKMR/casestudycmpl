@@ -1,0 +1,2583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Bharat Certis AgriScience — COVANA Studio Case Study</title>
+  <meta name="description" content="Strategic brand identity architecture for Bharat Certis AgriScience by COVANA Studio."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #07090b;
+      --bg-dark-card: #15191e;
+      --bg-light: #ffffff;
+      --bg-offwhite: #f5f6f8;
+      --text-main: #111417;
+      --text-light: #f4f6f8;
+      --text-gray-dark: #a0a8b2;
+      --text-gray-light: #525960;
+      --border-dark: #22272e;
+      --border-light: #e4e8eb;
+      --covana-orange: #ea5b18;
+      --covana-orange-hover: #fd6822;
+      --terracotta: #cc4510;
+      --midnight-blue: #162432;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      font-family: 'Mulish', -apple-system, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Fixed Studio Header */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 2000;
+      height: 86px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 6%;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--text-gray-light);
+      font-size: 0.92rem;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+    }
+
+    .btn-contact {
+      background: var(--text-main);
+      color: #fff;
+      padding: 9px 22px;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .btn-contact:hover {
+      background: var(--covana-orange);
+    }
+
+    /* HERO WITH BOTTOM GRADIENT OVERLAY (Screenshot 1 Style) */
+    .hero-container {
+      padding-top: 86px;
+      width: 100%;
+      background: var(--bg-dark);
+    }
+
+    .hero-visual {
+      position: relative;
+      width: 100%;
+      height: 78vh;
+      min-height: 560px;
+      max-height: 850px;
+      overflow: hidden;
+      background: var(--bg-dark);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .hero-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(7,9,11,0.98) 0%, rgba(7,9,11,0.65) 25%, rgba(7,9,11,0.1) 60%, rgba(0,0,0,0) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 50px 6%;
+    }
+
+    .hero-brand-title {
+      color: #ffffff;
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .hero-services {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #e0e6ed;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .sep-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--covana-orange);
+      display: inline-block;
+    }
+
+    /* DARK OVERVIEW SECTION (Screenshot 1 Style) */
+    .dark-overview {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 60px 6% 90px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .overview-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 56px;
+    }
+
+    .overview-col h3 {
+      color: #ffffff;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .overview-col p {
+      color: var(--text-gray-dark);
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+
+    /* ASYMMETRICAL EDITORIAL COLLAGE (Screenshot 2 & 3 Style) */
+    .collage-showcase {
+      background: var(--bg-light);
+      padding: 90px 6%;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .collage-header {
+      max-width: 760px;
+      margin-bottom: 60px;
+    }
+
+    .collage-header h2 {
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+
+    .collage-header p {
+      color: var(--text-gray-light);
+      font-size: 1.12rem;
+    }
+
+    /* Editorial Split Row (Screenshot 2 Style) */
+    .editorial-split-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .editorial-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .color-block {
+      padding: 44px;
+      border-radius: 12px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .color-block.orange {
+      background: var(--covana-orange);
+    }
+
+    .color-block.midnight {
+      background: var(--midnight-blue);
+    }
+
+    .color-block h3 {
+      font-size: 1.7rem;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+
+    .color-block p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      opacity: 0.94;
+    }
+
+    .img-box {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--bg-offwhite);
+      border: 1px solid var(--border-light);
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .img-box:hover img {
+      transform: scale(1.02);
+    }
+
+    .img-box.tall {
+      height: 100%;
+      min-height: 640px;
+    }
+
+    /* Balanced Triple, Dual Row & Full Width Canvas */
+    .dual-grid, .triple-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .triple-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .dual-grid .img-box, .triple-grid .img-box {
+      height: 400px;
+    }
+
+    .full-grid {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .full-grid .img-box {
+      max-height: 680px;
+    }
+
+    /* THE IMPACT SECTION (Screenshot 4 Style) */
+    .impact-section {
+      padding: 60px 6% 100px;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .impact-top-line {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 16px;
+      margin-bottom: 60px;
+    }
+
+    .impact-top-line h2 {
+      font-size: 1.4rem;
+      color: var(--covana-orange);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+    }
+
+    .impact-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .impact-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 24px;
+    }
+
+    .impact-card h3 {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+
+    .impact-card p {
+      color: var(--text-gray-light);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* WIDE COLOR TAKEAWAY BANNER (Screenshot 4 Bottom Style) */
+    .takeaway-banner {
+      background: linear-gradient(135deg, #ea5b18 0%, #db480e 100%);
+      color: #ffffff;
+      padding: 90px 6%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .takeaway-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .takeaway-mockup-wrapper {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 50px rgba(0,0,0,0.25);
+      transform: rotate(-2deg);
+      transition: transform 0.4s ease;
+    }
+
+    .takeaway-mockup-wrapper:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .takeaway-mockup-wrapper img {
+      width: 100%;
+      display: block;
+    }
+
+    .takeaway-text {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .takeaway-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #ffdacc;
+    }
+
+    .takeaway-quote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.8vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.25;
+      color: #ffffff;
+    }
+
+    .takeaway-sub {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #fff1eb;
+      max-width: 580px;
+      line-height: 1.6;
+    }
+
+    /* SPLIT DARK FAQ & CTA SECTION (Screenshot 5 Style) */
+    .dark-faq-cta {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 110px 6% 90px;
+    }
+
+    .faq-split-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 60px;
+      margin-bottom: 130px;
+    }
+
+    .faq-title-col h2 {
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .faq-title-col p {
+      color: var(--text-gray-dark);
+      font-size: 1.1rem;
+      max-width: 380px;
+    }
+
+    .faq-list-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-card {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-dark);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 22px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #ffffff;
+      user-select: none;
+    }
+
+    .faq-plus {
+      color: var(--covana-orange);
+      font-size: 1.4rem;
+      font-weight: 400;
+      transition: transform 0.3s;
+    }
+
+    .faq-card.active .faq-plus {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s;
+      color: var(--text-gray-dark);
+      font-size: 0.98rem;
+      line-height: 1.7;
+      padding: 0 28px;
+    }
+
+    .faq-card.active .faq-answer {
+      padding-bottom: 24px;
+    }
+
+    /* Bottom Pre-footer CTA Banner (Screenshot 5 Bottom Style) */
+    .cta-split-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-top: 60px;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .cta-split-inner h2 {
+      color: #ffffff;
+      font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+      line-height: 1.15;
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 16px 36px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: all 0.25s;
+    }
+
+    .btn-outline-white:hover {
+      background: #ffffff;
+      color: var(--text-main);
+      border-color: #ffffff;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--bg-dark);
+      padding: 40px 6% 60px;
+      border-top: 1px solid var(--border-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: var(--text-gray-dark);
+      font-size: 0.88rem;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    /* Decorative Background Shape Language Graphic (Close to the Wall) */
+    .shape-language-bg {
+      position: absolute;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.8;
+      filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.04));
+      user-select: none;
+    }
+
+    .shape-language-bg.wall-right {
+      left: calc(50% + 50vw - 320px);
+      width: 360px;
+      max-width: 26vw;
+      height: auto;
+    }
+
+    .shape-language-bg.wall-left {
+      right: calc(50% + 50vw - 320px);
+      width: 360px;
+      max-width: 26vw;
+      height: auto;
+      transform: scaleX(-1);
+    }
+
+    .evolution-section,
+    .collage-showcase,
+    .impact-section,
+    .social-campaign-section {
+      position: relative;
+      overflow: visible;
+    }
+
+    .evolution-section > *:not(.shape-language-bg),
+    .collage-showcase > *:not(.shape-language-bg),
+    .impact-section > *:not(.shape-language-bg),
+    .social-campaign-section > *:not(.shape-language-bg) {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* BRAND EVOLUTION & DESIGN SYSTEM SECTION */
+    .evolution-section {
+      padding: 100px 6% 80px;
+      max-width: 1500px;
+      margin: 0 auto;
+      background: var(--bg-light);
+    }
+
+    .sec-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--covana-orange);
+      margin-bottom: 12px;
+    }
+
+    .evolution-header {
+      max-width: 820px;
+      margin-bottom: 64px;
+    }
+
+    .evolution-header h2 {
+      font-size: clamp(2.3rem, 4vw, 3.2rem);
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .evolution-header p {
+      color: var(--text-gray-light);
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
+
+    /* Clean Light Theme Before vs After with Element Overlap */
+    .ba-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 32px;
+      margin-bottom: 96px;
+      align-items: stretch;
+      position: relative;
+    }
+
+    .ba-card {
+      border-radius: 24px;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+    }
+
+    .ba-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 55px rgba(0,0,0,0.08);
+    }
+
+    .ba-card.after-highlight {
+      border-color: rgba(16, 184, 101, 0.4);
+      box-shadow: 0 20px 50px rgba(13, 112, 187, 0.08);
+      z-index: 5;
+    }
+
+    .ba-img-wrapper {
+      height: 290px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 36px;
+      position: relative;
+      border-radius: 24px 24px 0 0;
+      overflow: hidden;
+    }
+
+    .ba-card.before-card .ba-img-wrapper {
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .ba-card.after-highlight .ba-img-wrapper {
+      background: linear-gradient(180deg, #f0f7ff 0%, #f8fafc 100%);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .ba-tag {
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      background: #334155;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 14px;
+      border-radius: 20px;
+      z-index: 5;
+    }
+
+    .ba-tag.new {
+      background: linear-gradient(90deg, #0d70bb 0%, #20b062 100%);
+      box-shadow: 0 4px 14px rgba(16, 184, 101, 0.35);
+    }
+
+    .ba-img-wrapper img {
+      max-height: 170px;
+      max-width: 90%;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.06));
+      transition: transform 0.5s ease;
+    }
+
+    .ba-card.after-highlight .ba-img-wrapper img {
+      max-height: 190px;
+      filter: drop-shadow(0 12px 25px rgba(0,0,0,0.12));
+    }
+
+    .ba-card:hover .ba-img-wrapper img {
+      transform: scale(1.04);
+    }
+
+    .ba-content {
+      padding: 38px 42px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      position: relative;
+    }
+
+    .ba-card .ba-content h3 {
+      font-size: 1.55rem;
+      margin-bottom: 14px;
+      color: #0f172a;
+    }
+
+    .ba-card .ba-content p {
+      color: #475569;
+      font-size: 1.04rem;
+      line-height: 1.7;
+    }
+
+    /* Widescreen Architectural Blueprint & Light Theme Overlapping Elements */
+    .blueprint-arena {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 40px;
+      margin-bottom: 96px;
+      background: #f8fafc;
+      border-radius: 32px;
+      border: 1px solid #e2e8f0;
+      padding: 45px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.04);
+      position: relative;
+    }
+
+    .blueprint-viewport {
+      padding: 40px;
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+      background-size: 24px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 520px;
+      box-shadow: inset 0 2px 12px rgba(0,0,0,0.02);
+    }
+
+    .blueprint-header-badge {
+      position: absolute;
+      top: 24px; left: 28px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #0d70bb;
+      background: #f1f5f9;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      z-index: 2;
+    }
+
+    .blueprint-interactive-canvas {
+      position: relative;
+      width: 100%;
+      max-width: 620px;
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .blueprint-viewport img {
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.08));
+      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .blueprint-img-outline {
+      position: relative;
+      z-index: 2;
+      opacity: 1;
+    }
+
+    .blueprint-img-filled {
+      position: absolute;
+      z-index: 3;
+      opacity: 0;
+      transform: scale(0.97);
+    }
+
+    .blueprint-viewport:hover .blueprint-img-outline {
+      opacity: 0.12;
+      transform: scale(1.02);
+    }
+
+    .blueprint-viewport:hover .blueprint-img-filled {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+
+    .blueprint-cards-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 32px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .concept-glass-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 30px 36px 30px 42px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: visible;
+    }
+
+    .concept-glass-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(16, 184, 101, 0.4);
+      box-shadow: 0 18px 45px rgba(13, 112, 187, 0.08);
+    }
+
+    /* Element Overlap: Icons and Badges breaking outside card borders */
+    .card-svg-icon {
+      position: absolute;
+      top: -22px; right: 28px;
+      width: 52px; height: 52px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 50%;
+      padding: 6px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.5s ease;
+      z-index: 10;
+    }
+
+    .concept-glass-card:hover .card-svg-icon {
+      transform: rotate(15deg) scale(1.1);
+      box-shadow: 0 12px 25px rgba(16, 184, 101, 0.2);
+    }
+
+    .concept-glass-card h4 {
+      font-size: 1.25rem;
+      color: #0f172a;
+      margin-bottom: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-right: 30px;
+    }
+
+    .box-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(234, 91, 24, 0.15);
+      color: var(--covana-orange);
+      font-weight: 800;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .concept-glass-card p {
+      color: #475569;
+      font-size: 0.98rem;
+      line-height: 1.66;
+    }
+
+    /* Modular Shape & Design System Grid in Crisp Light Theme */
+    .system-banner {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 60px 5%;
+      color: var(--text-main);
+      margin-bottom: 70px;
+      overflow: visible;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+    }
+
+    .system-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: 50px;
+      align-items: flex-start;
+    }
+
+    .system-info h3 {
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin-bottom: 24px;
+    }
+
+    .system-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .system-list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .system-bullet {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0d70bb;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .system-desc > strong {
+      color: #0f172a;
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .system-desc p {
+      color: #475569;
+      font-size: 0.98rem;
+      line-height: 1.62;
+    }
+
+    .system-desc strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* Geometric Shape Element Art & Display - Light Theme */
+    .shape-element-display {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .shape-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 16px;
+    }
+
+    .shape-visual-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .shape-box-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .leaf-shape {
+      width: 70px;
+      height: 70px;
+      border-radius: 0 100% 0 100%;
+      transform: rotate(-15deg);
+      transition: transform 0.4s ease;
+    }
+
+    .leaf-shape.solid {
+      background: linear-gradient(135deg, #008be3 0%, #10b865 100%);
+      box-shadow: 0 8px 25px rgba(16, 184, 101, 0.25);
+    }
+
+    .leaf-shape.trans {
+      background: linear-gradient(135deg, rgba(0, 139, 227, 0.7) 0%, rgba(16, 184, 101, 0.7) 100%);
+      position: relative;
+    }
+    .leaf-shape.trans::after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 70px;
+      height: 70px;
+      border-radius: 0 100% 0 100%;
+      background: linear-gradient(135deg, rgba(23, 36, 50, 0.6) 0%, rgba(0, 139, 227, 0.5) 100%);
+      mix-blend-mode: screen;
+    }
+
+    .leaf-shape.wire {
+      background: transparent;
+      border: 2px solid #10b865;
+      position: relative;
+    }
+    .leaf-shape.wire::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      bottom: 6px;
+      left: 6px;
+      border-radius: 0 100% 0 100%;
+      border: 1.5px dashed rgba(0, 139, 227, 0.6);
+    }
+
+    .shape-box-item:hover .leaf-shape {
+      transform: rotate(10deg) scale(1.08);
+    }
+
+    .shape-box-item span {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-gray-dark);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .shape-real-img {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border-dark);
+      max-height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Launch Key Visual Showcase */
+    .key-visual-banner {
+      margin-bottom: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+      background: #ffffff;
+    }
+
+    .key-visual-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Key Visual First Section Showcase */
+    .hero-kv-showcase {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 20px 6% 90px;
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 32px;
+      align-items: stretch;
+      background: var(--bg-dark);
+    }
+
+    .kv-card-item {
+      background: #0d1117;
+      border: 1px solid var(--border-dark);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .kv-card-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 60px rgba(16, 184, 101, 0.15);
+      border-color: rgba(16, 184, 101, 0.4);
+    }
+
+    .kv-card-header {
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--border-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.02);
+    }
+
+    .kv-card-header h4 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .kv-badge {
+      background: linear-gradient(90deg, #0d70bb 0%, #20b062 100%);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .kv-img-box {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #080a0c;
+      overflow: hidden;
+    }
+
+    .kv-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .kv-card-item:hover .kv-img-box img {
+      transform: scale(1.03);
+    }
+
+    /* Proper Mockup Style - Social Media Teaser Campaign Section in Light Theme */
+    .social-campaign-section {
+      background: #f8fafc;
+      padding: 100px 6% 110px;
+      max-width: 1500px;
+      margin: 0 auto;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .social-header-block {
+      max-width: 800px;
+      margin-bottom: 64px;
+    }
+
+    .social-header-block h2 {
+      font-size: clamp(2.2rem, 3.8vw, 3rem);
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+
+    .social-header-block p {
+      color: #475569;
+      font-size: 1.12rem;
+      line-height: 1.7;
+    }
+
+    .social-mockup-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .social-mockup-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .social-mockup-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 60px rgba(13, 112, 187, 0.12);
+      border-color: rgba(0, 139, 227, 0.35);
+    }
+
+    .sm-top-bar {
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #f1f5f9;
+      background: #ffffff;
+    }
+
+    .sm-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .sm-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0d70bb 0%, #20b062 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #fff;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      padding: 2px;
+    }
+
+    .sm-avatar-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 5px;
+    }
+
+    .sm-avatar-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .sm-user-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sm-username {
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sm-verified {
+      color: #10b865;
+      font-size: 0.85rem;
+    }
+
+    .sm-location {
+      color: #64748b;
+      font-size: 0.75rem;
+    }
+
+    .sm-more {
+      color: #94a3b8;
+      letter-spacing: 2px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .sm-media-viewport {
+      position: relative;
+      background: #f8fafc;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sm-carousel-slides {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sm-media-viewport img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.35s ease;
+    }
+
+    .sm-slide-tag {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      z-index: 10;
+    }
+
+    .sm-carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.75);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.25rem;
+      font-weight: 800;
+      z-index: 10;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(4px);
+      user-select: none;
+      line-height: 1;
+      padding-bottom: 2px;
+    }
+
+    .sm-carousel-btn:hover {
+      background: #0d70bb;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .sm-carousel-btn.prev-btn { left: 12px; }
+    .sm-carousel-btn.next-btn { right: 12px; }
+
+    .sm-dots-row {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.6);
+      padding: 5px 12px;
+      border-radius: 14px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .sm-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.45);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .sm-dot.active {
+      background: #ffffff;
+      transform: scale(1.35);
+    }
+
+    .sm-interaction-bar {
+      padding: 16px 20px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sm-icons-left {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .sm-icon {
+      color: #334155;
+      transition: color 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .sm-icon:hover {
+      color: #ea5b18;
+      transform: scale(1.15);
+    }
+
+    .sm-icon-right {
+      color: #334155;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .sm-icon-right:hover {
+      color: #10b865;
+    }
+
+    .sm-likes-count {
+      padding: 0 20px;
+      color: #0f172a;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .sm-likes-count span {
+      color: #10b865;
+    }
+
+    .sm-caption-wrap {
+      padding: 0 20px 18px;
+      color: #475569;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .sm-caption-wrap strong {
+      color: #0f172a;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .sm-hashtags {
+      display: block;
+      margin-top: 8px;
+      color: #008be3;
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    .sm-timestamp {
+      padding: 0 20px 20px;
+      color: #94a3b8;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-top: 1px solid #f1f5f9;
+      margin-top: auto;
+      padding-top: 12px;
+    }
+
+    /* FULL-SCREEN WIDESCREEN ARENA & LIGHT THEME OVERLAPPING ELEMENTS */
+    .fullscreen-kv-arena {
+      position: relative;
+      width: 100%;
+      background: #ffffff;
+      overflow: hidden;
+      padding-bottom: 90px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .fullscreen-banner-wrap {
+      position: relative;
+      width: 100%;
+      max-height: 85vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5f9;
+    }
+
+    .fullscreen-banner-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .fullscreen-vignette {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(255,255,255,0.9) 95%, rgba(255,255,255,1) 100%);
+      pointer-events: none;
+    }
+
+    /* Clean light theme spacing - NO section overlaps! */
+    .overlap-container {
+      max-width: 1500px;
+      margin: 50px auto 0;
+      padding: 0 6%;
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .overlap-glass-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .overlap-glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #0d70bb 0%, #20b062 100%);
+      border-radius: 24px 24px 0 0;
+    }
+
+    .overlap-glass-card h3 {
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      color: #0f172a;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+
+    .overlap-glass-card p {
+      color: #475569;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .overlap-stats-row {
+      display: flex;
+      gap: 36px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 26px;
+    }
+
+    .stat-item h4 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #008be3 0%, #10b865 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+
+    .stat-item span {
+      font-size: 0.85rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+
+    .overlap-poster-card {
+      border-radius: 24px;
+      overflow: visible;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2e8f0;
+      position: relative;
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlap-poster-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 75px rgba(0, 0, 0, 0.12);
+    }
+
+    .overlap-poster-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 24px;
+    }
+
+    /* Element overlap: badge floating outside top-right border */
+    .poster-badge {
+      position: absolute;
+      top: -16px; right: 28px;
+      background: #1e293b;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 2px solid #ffffff;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      z-index: 10;
+    }
+
+    /* SVG Vector Showcase System - Crisp Light Theme */
+    .svg-vector-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .svg-vector-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      text-align: center;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: visible;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+
+    .svg-vector-item:hover {
+      transform: translateY(-6px);
+      border-color: rgba(16, 184, 101, 0.4);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    }
+
+    .svg-icon-wrap {
+      height: 90px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .svg-icon-wrap img {
+      width: 75px;
+      height: 75px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 6px 14px rgba(0,0,0,0.1));
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .svg-vector-item:hover .svg-icon-wrap img {
+      transform: scale(1.15) rotate(5deg);
+    }
+
+    .svg-label-wrap strong {
+      display: block;
+      color: #0f172a;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .svg-label-wrap span {
+      font-size: 0.82rem;
+      color: var(--covana-orange);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    /* Master Logo Vector Banner in Light Theme */
+    .master-vector-box {
+      margin-top: 32px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .master-logo-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      position: relative;
+      z-index: 2;
+    }
+
+    .master-logo-render {
+      max-width: 720px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .master-logo-render img {
+      max-width: 100%;
+      height: auto;
+      max-height: 130px;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.06));
+    }
+
+    /* Floating Element Overlaps - No section overlap! */
+    .watermark-svg {
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      width: 160px;
+      height: 160px;
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 0;
+      transform: rotate(-15deg);
+    }
+
+    .overlap-editorial {
+      position: relative;
+      z-index: 10;
+      margin-top: 0;
+      margin-left: -30px;
+      border-radius: 16px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .overlap-editorial:hover {
+      transform: scale(1.02);
+      z-index: 20;
+    }
+
+    /* Responsive */
+    @media (max-width: 1080px) {
+      .overview-grid, .editorial-split-grid, .takeaway-inner, .faq-split-inner, .impact-grid, .ba-grid, .blueprint-arena, .system-grid, .shape-visual-grid, .hero-kv-showcase, .social-mockup-grid, .overlap-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .svg-vector-grid { grid-template-columns: 1fr 1fr; }
+      .overlap-container { margin-top: 40px; }
+      .ba-card.after-highlight { transform: none; }
+      .ba-card.after-highlight:hover { transform: translateY(-5px); }
+      .concept-glass-card { margin-left: 0; padding: 24px; }
+      .blueprint-cards-col { padding: 0 30px 40px 30px; }
+      .blueprint-viewport { padding: 40px 20px; min-height: 360px; }
+      .overlap-editorial { margin-top: 0; margin-left: 0; }
+      .overlap-glass-card { padding: 32px; }
+      .dual-grid, .triple-grid { grid-template-columns: 1fr; }
+      .takeaway-mockup-wrapper { transform: rotate(0deg); max-width: 600px; margin: 0 auto; }
+      .cta-split-inner { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-menu { display: none; }
+      .hero-visual { height: 60vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Studio Navigation (Covana Studio Only) -->
+  <nav class="navbar">
+    <a href="#" class="nav-logo">
+      <img src="./covana-color.png" 
+           onerror="this.src='file:///f:/COVANA/Case%20Study/covana-color.png'; this.onerror=function(){this.src='./covana-white.png';}" 
+           alt="COVANA Studio">
+    </a>
+    <ul class="nav-menu">
+      <li><a href="#overview" class="nav-link">Overview</a></li>
+      <li><a href="#evolution" class="nav-link">Brand Evolution</a></li>
+      <li><a href="#showcase" class="nav-link">Visual Architecture</a></li>
+      <li><a href="#impact" class="nav-link">Impact</a></li>
+      <li><a href="#faq" class="nav-link">FAQs</a></li>
+    </ul>
+    <a href="#contact" class="btn-contact">Contact Studio</a>
+  </nav>
+
+  <!-- HERO WITH DARK BOTTOM GRADIENT OVERLAY (Screenshot 1 Exact Style) -->
+  <div class="hero-container">
+    <div class="hero-visual">
+      <!-- Authentic Flagship Studio Render & Widescreen Key Visual Hero -->
+      <img class="hero-img" src="./ChatGPT Image Aug 6, 2026, 02_14_52 PM.png" onerror="this.src='file:///f:/COVANA/Case%20Study/ChatGPT%20Image%20Aug%206,%202026,%2002_14_52%20PM.png'; this.onerror=function(){this.src='./KV/BCA_Key Visual_150125_Final-01.png';}" alt="Bharat Certis AgriScience Executive Key Visual">
+      
+      <!-- Gradient Overlay Ribbon -->
+      <div class="hero-gradient-overlay">
+        <h1 class="hero-brand-title">Bharat Certis AgriScience (BCA)</h1>
+        <div class="hero-services">
+          <span>Strategic Brand Architecture</span>
+          <span class="sep-dot"></span>
+          <span>Visual Identity System</span>
+          <span class="sep-dot"></span>
+          <span>Executive Collateral Suite</span>
+          <span class="sep-dot"></span>
+          <span>Global Rollout</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DARK OVERVIEW SECTION (Screenshot 1 Style Transition) -->
+  <section id="overview" class="dark-overview">
+    <div class="overview-grid">
+      
+      <div class="overview-col">
+        <h3>Brand Overview</h3>
+        <p>
+          Founded in 1977 as Bharat Insecticides, Bharat Certis AgriScience Ltd. (BCA) has grown from humble beginnings into a leading authority in sustainable crop protection. Following a transformative joint venture with Japanese corporations Mitsui & Co., Ltd. and Nippon Soda Co., Ltd., BCA expanded its operations into over 30 countries with two state-of-the-art manufacturing facilities.
+        </p>
+      </div>
+
+      <div class="overview-col">
+        <h3>Problem Statement</h3>
+        <p>
+          As the enterprise scaled internationally, its historical domestic identity did not communicate world-class scientific authority or Japanese R&D synergy. The challenge was twofold: projecting international agronomic credibility to overseas OEM partners while simultaneously reassuring existing Indian farming communities of their lasting dependability and local care.
+        </p>
+      </div>
+
+      <div class="overview-col">
+        <h3>Strategic Objectives</h3>
+        <p>
+          Develop an empathetic brand architecture centered around dual archetypes: <strong>The Caregiver and The Creator</strong>. Create an evergreen symbol pairing an upward arrow of progress with an agriscience leaf motif. Establish an adaptable, digital-first design vocabulary utilizing Royal Trust Blue and Sustainable Growth Green across global divisions.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FULL-SCREEN EDGE-TO-EDGE KEY VISUAL ARENA WITH OVERLAPPING ARCHITECTURE -->
+  <section class="fullscreen-kv-arena">
+    <!-- Overlapping Glassmorphic Editorial Cards Layer -->
+    <div class="overlap-container">
+      
+      <!-- Left Overlapping Glass Card -->
+      <div class="overlap-glass-card">
+        <img src="./SVG/Asset 2.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/Asset%202.svg'" style="width: 65px; height: 65px; margin-bottom: 20px; position: relative; z-index: 2;" alt="BCA Monogram Seal">
+        <h3 style="position: relative; z-index: 2;">Unity in Vision, Strength in Innovation</h3>
+        <p style="position: relative; z-index: 2;">To celebrate the global joint venture with Japanese champions Mitsui & Co., Ltd. and Nippon Soda Co., Ltd., COVANA crafted an evergreen Key Visual architecture. The overlapping blue and green structural rings represent operational synergy—uniting trusted agricultural traditions with robotic, laboratory-grade agriscience precision.</p>
+        
+        <div class="overlap-stats-row" style="position: relative; z-index: 2;">
+          <div class="stat-item">
+            <h4>30+</h4>
+            <span>Global Markets</span>
+          </div>
+          <div class="stat-item">
+            <h4>1977</h4>
+            <span>Legacy Roots</span>
+          </div>
+          <div class="stat-item">
+            <h4>100%</h4>
+            <span>Vector System</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Overlapping Vertical Poster Box -->
+      <div class="overlap-poster-card">
+        <span class="poster-badge">Executive Vertical Format</span>
+        <img src="./KV/BCA_Key Visual_150125_Final-02.png" onerror="this.src='file:///f:/COVANA/Case%20Study/KV/BCA_Key%20Visual_150125_Final-02.png'" alt="Vertical Key Visual Poster">
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- STRATEGIC BRAND EVOLUTION, POSITIONING & DESIGN SYSTEM -->
+  <section id="evolution" class="evolution-section">
+    <!-- Decorative Shape Language (Close to the Wall) -->
+    <img class="shape-language-bg wall-right" style="top: 10px;" src="./4x/SVG/Asset 1.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/4x/SVG/Asset%201.svg'" alt="Shape Language Background Decor">
+    <div class="sec-tagline">Strategic Rebrand & Identity</div>
+    <div class="evolution-header">
+      <h2>Brand Evolution & Architecture</h2>
+      <p>Transitioning from a legacy-driven visual identity (established in 1977 as Bharat Insecticides) to a modern, progressive global agriscience authority following the strategic joint venture with Mitsui & Co., Ltd. and Nippon Soda Co., Ltd.</p>
+    </div>
+
+    <!-- Overlapping Before vs After Brand Identity Showcase -->
+    <div class="ba-grid">
+      <!-- Legacy Brand (Before) -->
+      <div class="ba-card before-card">
+        <div class="ba-img-wrapper">
+          <div class="ba-tag">Before (Est. 1977)</div>
+          <img src="./old logo.png" onerror="this.src='file:///f:/COVANA/Case%20Study/old%20logo.png'" alt="Legacy Bharat Insecticides Logo">
+        </div>
+        <div class="ba-content">
+          <h3>The Legacy Domestic Identity</h3>
+          <p>Originally established in 1977 as Bharat Insecticides, the company spent decades cultivating deep trust within Indian farming communities. However, as global capabilities expanded, the existing heritage logo no longer conveyed modern scientific leadership or world-class manufacturing scale.</p>
+        </div>
+      </div>
+
+      <!-- Modern Global Identity (After - Pure Vector SVG Display) -->
+      <div class="ba-card after-highlight">
+        <div class="ba-img-wrapper">
+          <div class="ba-tag new">After (New Global Identity) • Pure Vector</div>
+          <img src="./SVG/logo.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/logo.svg'" alt="New BCA Global Brand Identity Official Vector">
+        </div>
+        <div class="ba-content">
+          <h3>The Global Agriscience Authority</h3>
+          <p>Following the strategic joint venture with Japanese champions Mitsui & Co., Ltd. and Nippon Soda Co., Ltd., BCA evolved into a progressive international powerhouse. The refreshed emblem presents a sharper, future-ready vector architecture that balances cutting-edge innovation with enduring grassroots dependability.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Widescreen Architectural Blueprint & Overlapping Insight Stage -->
+    <div class="blueprint-arena">
+      <!-- Left Blueprint Canvas -->
+      <div class="blueprint-viewport">
+        <div class="blueprint-interactive-canvas">
+          <img class="blueprint-img-outline" src="./4x/2.png" onerror="this.src='file:///f:/COVANA/Case%20Study/4x/2.png'" alt="BCA Architectural Logo Wireframe Line Art">
+          <img class="blueprint-img-filled" src="./4x/1.png" onerror="this.src='file:///f:/COVANA/Case%20Study/4x/1.png'" alt="BCA Architectural Logo Filled Vector">
+        </div>
+      </div>
+
+      <!-- Right Overlapping Glassmorphic Concept Cards -->
+      <div class="blueprint-cards-col">
+        
+        <!-- Concept 1: B & C -->
+        <div class="concept-glass-card">
+          <img src="./SVG/Asset 4.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/Asset%204.svg'" class="card-svg-icon" alt="Trust Ring Vector">
+          <h4><span class="box-badge" style="background: rgba(0, 139, 227, 0.2); color: #008be3;">1</span> B & C — Smooth & Interconnected</h4>
+          <p>The smooth, rounded, and intertwined letterforms of 'B' and 'C' symbolize collaboration, operational harmony, and the interconnected ecosystem of agriculture, community, and scientific precision.</p>
+        </div>
+
+        <!-- Concept 2: A & Leaf Motif -->
+        <div class="concept-glass-card">
+          <img src="./SVG/Asset 3.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/Asset%203.svg'" class="card-svg-icon" alt="Agriscience Leaf Vector">
+          <h4><span class="box-badge" style="background: rgba(16, 184, 101, 0.2); color: #10b865;">2</span> A & Leaf — Progress & Nurture</h4>
+          <p>The sharp upward arrow of the 'A' represents dynamic growth, technological progress, and a forward-thinking mindset. Embedded directly inside its negative space is a crisp agricultural leaf motif, symbolizing sustainable farming practices and nurturing environmental care.</p>
+        </div>
+
+        <!-- Concept 3: Brand Positioning -->
+        <div class="concept-glass-card">
+          <img src="./SVG/Asset 5.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/Asset%205.svg'" class="card-svg-icon" alt="Synergy Ring Vector">
+          <h4><span class="box-badge" style="background: rgba(234, 91, 24, 0.2); color: #ea5b18;">3</span> Positioning: Caregiver + Creator</h4>
+          <p>We harmonized two distinct archetypes: <strong>The Caregiver</strong> (deep local community understanding, farmer well-being, and dependability) with <strong>The Creator</strong> (cutting-edge Japanese agriscience innovation and future-focused problem solving).</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Design System & Modular Shape Element Banner -->
+    <div class="system-banner">
+      <div class="system-grid">
+        <div class="system-info">
+          <h3>The Core Design System & Visual Language</h3>
+          <ul class="system-list">
+            <li>
+              <div class="system-bullet" style="color: #0061af; background: rgba(0, 97, 175, 0.12);">C</div>
+              <div class="system-desc">
+                <strong>Dynamic Color Story</strong>
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 6px;">
+                  <div style="display: flex; align-items: baseline; gap: 10px; font-size: 0.95rem; line-height: 1.5; color: #475569;">
+                    <span style="width: 10px; height: 10px; border-radius: 50%; background: #034ea2; flex-shrink: 0; display: inline-block;"></span>
+                    <div><strong style="color: #034ea2; font-weight: 700;">Legacy & Trust Blue</strong> — Anchors historical authority and grassroots dependability in food security.</div>
+                  </div>
+                  <div style="display: flex; align-items: baseline; gap: 10px; font-size: 0.95rem; line-height: 1.5; color: #475569;">
+                    <span style="width: 10px; height: 10px; border-radius: 50%; background: #10b865; flex-shrink: 0; display: inline-block;"></span>
+                    <div><strong style="color: #10b865; font-weight: 700;">Sustainability Green</strong> — Embodies environmental vitality and progressive eco-conscious agricultural R&D.</div>
+                  </div>
+                  <div style="display: flex; align-items: baseline; gap: 10px; font-size: 0.95rem; line-height: 1.5; color: #475569;">
+                    <span style="width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(90deg, #034ea2, #10b865); flex-shrink: 0; display: inline-block;"></span>
+                    <div><strong style="color: #0f172a; font-weight: 700;">Connecting Gradients</strong> — Adds modern, tech-enabled adaptability across digital and tangible packaging touchpoints.</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="system-bullet" style="color: #ea5b18; background: rgba(234, 91, 24, 0.12);">T</div>
+              <div class="system-desc">
+                <strong>Typography: Zona Pro</strong>
+                <p>Selected for its versatile, contemporary sans-serif geometry. It balances institutional strength with approachability, delivering unmistakable readability across high-res digital interfaces and printed agricultural packaging alike.</p>
+              </div>
+            </li>
+            <li>
+              <div class="system-bullet" style="color: #10b865; background: rgba(16, 184, 101, 0.12);">S</div>
+              <div class="system-desc">
+                <strong>Modular Shape Elements</strong>
+                <p>The interlocking leaf and arrowhead motifs transform into dynamic decorative systems—extending through solid gradient fills, translucent structural overlays, and precise wireframe architecture across global operations.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Official Modular SVG Component Architecture Showcase -->
+        <div class="shape-element-display" style="gap: 28px; padding: 42px;">
+          <div class="shape-title">
+            <span>Official SVG Modular Vector Architecture</span>
+            <span style="color: #ea5b18; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;">Pure Vector Suite</span>
+          </div>
+
+          <!-- 4-Column SVG Component Grid -->
+          <div class="svg-vector-grid">
+            
+            <!-- Asset 3: Nurture Leaf -->
+            <div class="svg-vector-item">
+              <div class="svg-icon-wrap">
+                <img style="width: 70px; height: 70px; object-fit: contain; display: block;" src="./SVG/Asset 3.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/Asset%203.svg'" alt="Agriscience Leaf Vector">
+              </div>
+              <div class="svg-label-wrap">
+                <strong>Nurture Leaf</strong>
+                <span>Sustainability Green</span>
+              </div>
+            </div>
+
+            <!-- Asset 4: Trust Ring -->
+            <div class="svg-vector-item">
+              <div class="svg-icon-wrap">
+                <img style="width: 70px; height: 70px; object-fit: contain; display: block;" src="./SVG/Asset 4.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/Asset%204.svg'" alt="Trust Blue Interlock Ring Vector">
+              </div>
+              <div class="svg-label-wrap">
+                <strong>Trust Ring</strong>
+                <span>Legacy Blue</span>
+              </div>
+            </div>
+
+            <!-- Asset 5: Synergy Gradient Ring -->
+            <div class="svg-vector-item">
+              <div class="svg-icon-wrap">
+                <img style="width: 70px; height: 70px; object-fit: contain; display: block;" src="./SVG/Asset 5.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/Asset%205.svg'" alt="Dynamic Connecting Gradient Ring Vector">
+              </div>
+              <div class="svg-label-wrap">
+                <strong>Synergy Ring</strong>
+                <span>Dynamic Gradient</span>
+              </div>
+            </div>
+
+            <!-- Asset 2: Consolidated Emblem -->
+            <div class="svg-vector-item">
+              <div class="svg-icon-wrap">
+                <img style="width: 70px; height: 70px; object-fit: contain; display: block;" src="./SVG/Asset 2.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/Asset%202.svg'" alt="Consolidated Emblem Vector">
+              </div>
+              <div class="svg-label-wrap">
+                <strong>Master Emblem</strong>
+                <span>Integrated Symbol</span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STANDALONE DARK SECTION: OFFICIAL BRAND MOTION & LOGO REVEAL -->
+  <section id="logo-reveal" style="background: #090e17; padding: 110px 6% 120px; position: relative; overflow: hidden; border-top: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+    <!-- Subtle Background Glow -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 850px; height: 850px; background: radial-gradient(circle, rgba(0, 139, 227, 0.08) 0%, rgba(16, 184, 101, 0.06) 50%, transparent 70%); pointer-events: none; z-index: 0;"></div>
+
+    <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 2;">
+      <!-- Section Tag & Title -->
+      <div style="text-align: center; margin-bottom: 60px;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; color: #10b865; font-size: 0.86rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 16px;">
+          <span>●</span> Official Motion Reveal & Sonic Branding
+        </div>
+        <h2 style="font-size: clamp(2.4rem, 4.5vw, 3.8rem); color: #ffffff; letter-spacing: -0.03em; line-height: 1.15; font-weight: 900; margin-bottom: 18px;">
+          Bringing the Identity to Life
+        </h2>
+        <p style="font-size: 1.18rem; color: #94a3b8; max-width: 760px; margin: 0 auto; line-height: 1.6; font-weight: 400;">
+          A cinematic exploration of the refreshed Bharat Certis AgriScience emblem—merging dynamic geometry with immersive custom sound architecture.
+        </p>
+      </div>
+
+      <!-- Video Presentation Wrapper -->
+      <div style="max-width: 1300px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7); border: 1px solid rgba(255, 255, 255, 0.12); background: #000000; position: relative;">
+        <video autoplay loop muted playsinline controls style="width: 100%; height: auto; display: block;">
+          <source src="./Video/BCA_Logo_Reveal_compressed.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASYMMETRICAL EDITORIAL COLLAGE (Screenshot 2 & 3 Exact Style) -->
+  <section id="showcase" class="collage-showcase">
+    <!-- Decorative Shape Language (Close to the Wall) -->
+    <img class="shape-language-bg wall-right" style="top: -10px;" src="./4x/SVG/Asset 1.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/4x/SVG/Asset%201.svg'" alt="Shape Language Background Decor">
+    <div class="collage-header">
+      <h2>Visual Architecture & Collateral Ecosystem</h2>
+      <p>An immersive look into the tangible print assets, executive stationery, employee badging, and standardized corporate identity deliverables designed for BCA's worldwide operations.</p>
+    </div>
+
+    <!-- Editorial Split Block (Screenshot 2 Asymmetric Layout) -->
+    <div class="editorial-split-grid">
+      
+      <!-- Left Column: Colored Editorial Text + Business Card Architecture -->
+      <div class="editorial-column">
+        <div class="color-block orange">
+          <h3>Strategic Brand Architecture</h3>
+          <p>We engineered an adaptable visual hierarchy built upon clarity and precision. The upward-pointing arrow of the 'A' symbolizes technological progress, enclosing a vibrant agriscience leaf motif inside its negative space.</p>
+        </div>
+
+        <div class="img-box overlap-editorial">
+          <img style="min-height: 380px;" src="./bca_biz_mockup_1785957066204.png" onerror="this.src='file:///C:/Users/emmas/.gemini/antigravity-ide/brain/56435ec5-7188-4fa6-bb93-96cfe47ee46d/bca_biz_mockup_1785957066204.png'; this.onerror=function(){this.src='./visiting card mock.png';}" alt="Executive Business Card Ecosystem">
+        </div>
+
+        <div class="color-block midnight">
+          <h3>Empowering, Dependable Tone</h3>
+          <p>Moving away from generic chemical labeling, every brand touchpoint was calibrated to instill hope, environmental stewardship, and farmer confidence across multi-regional agricultural markets.</p>
+        </div>
+      </div>
+
+      <!-- Right Column: Tall Brand Suite Feature -->
+      <div class="editorial-column">
+        <div class="img-box tall">
+          <img src="./bca_suite_mockup_1785957091333.png" onerror="this.src='file:///C:/Users/emmas/.gemini/antigravity-ide/brain/56435ec5-7188-4fa6-bb93-96cfe47ee46d/bca_suite_mockup_1785957091333.png'; this.onerror=function(){this.src='./letterhead mockup.png';}" alt="Complete Brand Suite Architecture">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Triple Presentation Row (Envelopes, Employee Badging & Digital Touchpoint) -->
+    <div class="triple-grid">
+      <div class="img-box">
+        <img src="./Envolope MOckup.png" onerror="this.src='file:///f:/COVANA/Case%20Study/Envolope%20MOckup.png'" alt="Die-Cut Correspondence Envelopes">
+      </div>
+      <div class="img-box">
+        <img src="./id card mockup.png" onerror="this.src='file:///f:/COVANA/Case%20Study/id%20card%20mockup.png'" alt="Employee Identification Badging & Lanyards">
+      </div>
+      <div class="img-box">
+        <img src="./bca_email_mockup_1785957078320.png" onerror="this.src='file:///C:/Users/emmas/.gemini/antigravity-ide/brain/56435ec5-7188-4fa6-bb93-96cfe47ee46d/bca_email_mockup_1785957078320.png'; this.onerror=function(){this.src='./letterhead mockup.png';}" alt="Enterprise HTML Email Signature Ecosystem">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- THE IMPACT SECTION (Screenshot 4 Top Exact Style) -->
+  <section id="impact" class="impact-section">
+    <div class="impact-top-line">
+      <h2>Impact & Outcomes</h2>
+    </div>
+
+    <div class="impact-grid">
+      
+      <div class="impact-card">
+        <!-- Globe Grid Icon for Global Expansion -->
+        <svg class="impact-icon" viewBox="0 0 24 24" fill="none" stroke="#ea5b18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M2 12h20"></path>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <h3>Global Brand Differentiation</h3>
+        <p>Successfully transformed BCA's perception from a domestic supplier into a premier international agriscience authority, expanding distribution efficiency across 30+ countries.</p>
+      </div>
+
+      <div class="impact-card">
+        <!-- Agronomic Growth & Stewardship Icon for Farmer Trust -->
+        <svg class="impact-icon" viewBox="0 0 24 24" fill="none" stroke="#ea5b18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 10V21"></path>
+          <path d="M7 13c-3-2-3.5-5.5-1.5-7.5s5.5 1.5 6.5 4"></path>
+          <path d="M17 13c3-2 3.5-5.5 1.5-7.5s-5.5 1.5-6.5 4"></path>
+          <path d="M3 19h18"></path>
+        </svg>
+        <h3>Deepened Farmer Trust</h3>
+        <p>By rooting the identity in the empathetic Caregiver archetype, the new visual identity reinforced community confidence and agricultural reliability throughout Indian rural markets.</p>
+      </div>
+
+      <div class="impact-card">
+        <!-- Interlocking Synergy Icon for Joint Venture -->
+        <svg class="impact-icon" viewBox="0 0 24 24" fill="none" stroke="#ea5b18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="8" cy="12" r="6"></circle>
+          <circle cx="16" cy="12" r="6"></circle>
+          <line x1="12" y1="8" x2="12" y2="16"></line>
+        </svg>
+        <h3>Joint Venture Synergy</h3>
+        <p>Unanimous commendation from joint venture partners Mitsui & Co., Ltd. and Nippon Soda Co., Ltd., creating a seamless design language that celebrates Japanese R&D precision.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOCIAL MEDIA TEASER & LAUNCH CAROUSEL (Proper Mockup Style before Orange Bottom Section) -->
+  <section id="social-mockups" class="social-campaign-section">
+    <!-- Decorative Shape Language (Close to the Wall) -->
+    <img class="shape-language-bg wall-right" style="top: 20px;" src="./4x/SVG/Asset 1.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/4x/SVG/Asset%201.svg'" alt="Shape Language Background Decor">
+    <div class="sec-tagline" style="color: #ea5b18; display: inline-flex; align-items: center; gap: 10px; font-size: 0.88rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px;">Digital Rollout & Campaign</div>
+    <div class="social-header-block">
+      <h2>Teaser Carousel & Pre-Launch Engagement</h2>
+      <p>Before unveiling the refreshed corporate visual architecture, COVANA orchestrated a high-impact digital teaser campaign across key social channels (LinkedIn & Instagram) to drive anticipation around <strong>#BharatCertisReimagined</strong>.</p>
+    </div>
+
+    <!-- 3-Column Modern Social Post Mockup Grid -->
+    <div class="social-mockup-grid">
+      
+      <!-- Mockup Card 1: Interactive Teaser Carousel (3 Slides) -->
+      <div class="social-mockup-card">
+        <!-- Social Header -->
+        <div class="sm-top-bar">
+          <div class="sm-profile">
+            <div class="sm-avatar"><div class="sm-avatar-inner"><img src="./SVG/logo.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/logo.svg'" alt="BCA Logo"></div></div>
+            <div class="sm-user-meta">
+              <span class="sm-username">BharatCertis_Official <span class="sm-verified">✓</span></span>
+              <span class="sm-location">Pre-Launch Campaign</span>
+            </div>
+          </div>
+          <div class="sm-more">•••</div>
+        </div>
+        
+        <!-- Interactive Media Screen -->
+        <div class="sm-media-viewport" data-carousel="true">
+          <span class="sm-slide-tag">1 / 3</span>
+          <div class="sm-carousel-slides">
+            <img class="carousel-slide active" src="./Teaser Carousel/BCA_Teaser_070125-01.png" onerror="this.src='file:///f:/COVANA/Case%20Study/Teaser%20Carousel/BCA_Teaser_070125-01.png'" alt="Teaser Slide 1: United in Purpose">
+            <img class="carousel-slide" src="./Teaser Carousel/BCA_Teaser_070125-02.png" onerror="this.src='file:///f:/COVANA/Case%20Study/Teaser%20Carousel/BCA_Teaser_070125-02.png'" style="display: none;" alt="Teaser Slide 2: With Nature, For the Future">
+            <img class="carousel-slide" src="./Teaser Carousel/BCA_Teaser_070125-03.png" onerror="this.src='file:///f:/COVANA/Case%20Study/Teaser%20Carousel/BCA_Teaser_070125-03.png'" style="display: none;" alt="Teaser Slide 3: Together, We Innovate">
+          </div>
+          <button class="sm-carousel-btn prev-btn" aria-label="Previous Slide">‹</button>
+          <button class="sm-carousel-btn next-btn" aria-label="Next Slide">›</button>
+          <div class="sm-dots-row">
+            <span class="sm-dot active" data-index="0"></span>
+            <span class="sm-dot" data-index="1"></span>
+            <span class="sm-dot" data-index="2"></span>
+          </div>
+        </div>
+        
+        <!-- Engagement Action Toolbar -->
+        <div class="sm-interaction-bar">
+          <div class="sm-icons-left">
+            <span class="sm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span>
+            <span class="sm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>
+            <span class="sm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></span>
+          </div>
+          <div class="sm-icon-right"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div>
+        </div>
+        
+        <!-- Likes & Caption -->
+        <div class="sm-likes-count">Liked by <span>mitsuiofficial</span> and <span>3,420 others</span></div>
+        <div class="sm-caption-wrap">
+          <strong>BharatCertis_Official</strong> United in purpose, Driven by innovation. Before our official unveil, our digital teaser sequence engaged farming communities and global R&D leaders with glimpses into our reimagined architectural identity. Swipe to explore! 👉
+          <span class="sm-hashtags">#BharatCertisReimagined #TeaserCampaign #Agriscience #ComingSoon #JointVenture</span>
+        </div>
+      </div>
+
+      <!-- Mockup Card 2: Interactive Launch Carousel (4 Slides) -->
+      <div class="social-mockup-card">
+        <div class="sm-top-bar">
+          <div class="sm-profile">
+            <div class="sm-avatar"><div class="sm-avatar-inner"><img src="./SVG/logo.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/logo.svg'" alt="BCA Logo"></div></div>
+            <div class="sm-user-meta">
+              <span class="sm-username">BharatCertis_Official <span class="sm-verified">✓</span></span>
+              <span class="sm-location">Official Brand Launch</span>
+            </div>
+          </div>
+          <div class="sm-more">•••</div>
+        </div>
+        
+        <!-- Interactive Media Screen -->
+        <div class="sm-media-viewport" data-carousel="true">
+          <span class="sm-slide-tag">1 / 4</span>
+          <div class="sm-carousel-slides">
+            <img class="carousel-slide active" src="./Carousel/unnamed.jpg" onerror="this.src='file:///f:/COVANA/Case%20Study/Carousel/unnamed.jpg'" alt="Launch Slide 1">
+            <img class="carousel-slide" src="./Carousel/unnamed (1).jpg" onerror="this.src='file:///f:/COVANA/Case%20Study/Carousel/unnamed%20(1).jpg'" style="display: none;" alt="Launch Slide 2">
+            <img class="carousel-slide" src="./Carousel/unnamed (2).jpg" onerror="this.src='file:///f:/COVANA/Case%20Study/Carousel/unnamed%20(2).jpg'" style="display: none;" alt="Launch Slide 3">
+            <img class="carousel-slide" src="./Carousel/unnamed (3).jpg" onerror="this.src='file:///f:/COVANA/Case%20Study/Carousel/unnamed%20(3).jpg'" style="display: none;" alt="Launch Slide 4">
+          </div>
+          <button class="sm-carousel-btn prev-btn" aria-label="Previous Slide">‹</button>
+          <button class="sm-carousel-btn next-btn" aria-label="Next Slide">›</button>
+          <div class="sm-dots-row">
+            <span class="sm-dot active" data-index="0"></span>
+            <span class="sm-dot" data-index="1"></span>
+            <span class="sm-dot" data-index="2"></span>
+            <span class="sm-dot" data-index="3"></span>
+          </div>
+        </div>
+        
+        <!-- Engagement Action Toolbar -->
+        <div class="sm-interaction-bar">
+          <div class="sm-icons-left">
+            <span class="sm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span>
+            <span class="sm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>
+            <span class="sm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></span>
+          </div>
+          <div class="sm-icon-right"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div>
+        </div>
+        
+        <!-- Likes & Caption -->
+        <div class="sm-likes-count">Liked by <span>nipponsoda_co</span> and <span>6,840 others</span></div>
+        <div class="sm-caption-wrap">
+          <strong>BharatCertis_Official</strong> Introducing the Reimagined Bharat Certis AgriScience! Our modern identity unites historic domestic crop protection roots with robotic Japanese scientific mastery across 30+ countries worldwide. Swipe through our campaign launch story! 👉
+          <span class="sm-hashtags">#BrandTransformation #CropProtection #AgriTech #GlobalIdentity #SustainableFarming</span>
+        </div>
+      </div>
+
+      <!-- Mockup Card 3: Standalone Flagship Post (post.jpg) -->
+      <div class="social-mockup-card">
+        <div class="sm-top-bar">
+          <div class="sm-profile">
+            <div class="sm-avatar"><div class="sm-avatar-inner"><img src="./SVG/logo.svg" onerror="this.src='file:///f:/COVANA/Case%20Study/SVG/logo.svg'" alt="BCA Logo"></div></div>
+            <div class="sm-user-meta">
+              <span class="sm-username">BharatCertis_Official <span class="sm-verified">✓</span></span>
+              <span class="sm-location">Flagship Feature</span>
+            </div>
+          </div>
+          <div class="sm-more">•••</div>
+        </div>
+        
+        <!-- Media Screen -->
+        <div class="sm-media-viewport">
+          <span class="sm-slide-tag" style="background: #10b865; border-color: #10b865;">Featured Post</span>
+          <img src="./post.jpg" onerror="this.src='file:///f:/COVANA/Case%20Study/post.jpg'" alt="Standalone Flagship Feature Post">
+        </div>
+        
+        <!-- Engagement Action Toolbar -->
+        <div class="sm-interaction-bar">
+          <div class="sm-icons-left">
+            <span class="sm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span>
+            <span class="sm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>
+            <span class="sm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></span>
+          </div>
+          <div class="sm-icon-right"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div>
+        </div>
+        
+        <!-- Likes & Caption -->
+        <div class="sm-likes-count">Liked by <span>agriscience_weekly</span> and <span>8,190 others</span></div>
+        <div class="sm-caption-wrap">
+          <strong>BharatCertis_Official</strong> With nature, for the future. Our standalone emblem encapsulates our dual philosophy: The Caregiver protecting farming communities and The Creator driving progressive chemistry.
+          <span class="sm-hashtags">#WithNature #FutureOfFarming #BCA #Innovation #AgriscienceMastery</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MASTER HORIZONTAL KEY VISUAL ARENA -->
+  <section id="master-kv" style="background: #ffffff; padding: 70px 6% 110px; position: relative; overflow: hidden; border-top: 1px solid #e2e8f0;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 860px; margin: 0 auto 50px;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; color: #ea5b18; font-size: 0.88rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px;">
+          <span>●</span> Master Brand Campaign Artwork
+        </div>
+        <h2 style="font-size: clamp(2.2rem, 3.8vw, 3.2rem); color: #0f172a; letter-spacing: -0.02em; font-weight: 900; margin-bottom: 14px;">
+          Horizontal Key Visual Architecture
+        </h2>
+        <p style="font-size: 1.15rem; color: #475569; line-height: 1.6;">
+          The standardized master Key Visual format designed for global agricultural trade exhibitions, widespread print publications, and large-scale digital billboard placements worldwide.
+        </p>
+      </div>
+
+      <!-- High-Impact KV Artwork Display Card -->
+      <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 35px 80px rgba(15, 23, 42, 0.12); border: 1px solid #e2e8f0; background: #ffffff; transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);" onmouseover="this.style.transform='scale(1.01)';" onmouseout="this.style.transform='scale(1)';">
+        <img src="./KV/BCA_Key Visual_150125_Final-01.png" onerror="this.src='file:///f:/COVANA/Case%20Study/KV/BCA_Key%20Visual_150125_Final-01.png'" style="width: 100%; height: auto; display: block;" alt="Master Horizontal Key Visual">
+      </div>
+    </div>
+  </section>
+
+  <!-- WIDE COLORED TAKEAWAY BANNER (Screenshot 4 Bottom Exact Style) -->
+  <section class="takeaway-banner">
+    <div class="takeaway-inner">
+      
+      <!-- Floating Mockup on Left -->
+      <div class="takeaway-mockup-wrapper">
+        <img src="./letterhead mockup.png" onerror="this.src='file:///f:/COVANA/Case%20Study/letterhead%20mockup.png'" alt="Brand Suite Showcase">
+      </div>
+
+      <!-- Editorial Quote & Key Takeaway on Right -->
+      <div class="takeaway-text">
+        <div class="takeaway-label">
+          <span>Key Takeaway</span>
+          <span>—</span>
+          <span>Agriscience Sector</span>
+        </div>
+        <div class="takeaway-quote">
+          "A dependable partner in sustainable agriculture, combining global innovation with deep local understanding to help farmers thrive."
+        </div>
+        <div class="takeaway-sub">
+          When reimagining an industrial heritage brand, balancing modern Japanese technological engineering with grassroots empathy turns corporate transition into an enduring story of agricultural triumph.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPLIT DARK FAQ & CTA SECTION (Screenshot 5 Exact Style) -->
+  <section id="faq" class="dark-faq-cta">
+    
+    <div class="faq-split-inner">
+      <!-- Left Title Column -->
+      <div class="faq-title-col">
+        <h2>FAQs</h2>
+        <p>Find quick answers about COVANA Studio's strategic brand positioning, architecture, and design methodologies for BCA.</p>
+      </div>
+
+      <!-- Right Accordion Column -->
+      <div class="faq-list-col">
+        
+        <div class="faq-card active">
+          <div class="faq-question">
+            <span>Why did BCA initiate a brand redesign following the joint venture?</span>
+            <div class="faq-plus">+</div>
+          </div>
+          <div class="faq-answer" style="max-height: 180px;">
+            Following the strategic joint venture with Mitsui & Co., Ltd. and Nippon Soda Co., Ltd., BCA expanded its capabilities across 30+ international markets. Their legacy visual identity required an evolution to project global Japanese R&D excellence while safeguarding decades of earned domestic farmer trust.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-question">
+            <span>How does the logo geometry encode agriscience values?</span>
+            <div class="faq-plus">+</div>
+          </div>
+          <div class="faq-answer">
+            COVANA engineered a fluid monogram where interconnected letters 'B' and 'C' represent community collaboration and natural symbiosis. The upward-facing trajectory of 'A' forms an arrow of growth, enclosing an agriscience leaf motif within its negative space.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-question">
+            <span>What typography and color philosophy was deployed?</span>
+            <div class="faq-plus">+</div>
+          </div>
+          <div class="faq-answer">
+            The brand utilizes Zona Pro across all applications for its legible clarity and approachable modernity. The color palette unites Royal Trust Blue (Pantone 2145 C / C100 M65), representing structural dependability, with Sustainable Growth Green (Pantone 3501 C / C70 Y100), representing agricultural vitality.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-question">
+            <span>What was the full scope of deliverables produced by COVANA?</span>
+            <div class="faq-plus">+</div>
+          </div>
+          <div class="faq-answer">
+            COVANA formulated the full strategic brand positioning, corporate brand guidelines, executive stationery suites (letterheads, visiting cards, packaging), employee identification badging, enterprise HTML email signatures, PowerPoint presentation architecture, and a phased rollout plan.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Pre-Footer Split CTA Banner (Screenshot 5 Bottom Style) -->
+    <div id="contact" class="cta-split-inner">
+      <h2>Let's Talk About <br/>The Next Big Thing</h2>
+      <a href="mailto:studio@covana.com" class="btn-outline-white">CONTACT US</a>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">
+      <img src="./covana-white infinity.png" 
+           onerror="this.src='file:///f:/COVANA/Case%20Study/covana-white%20infinity.png'; this.onerror=function(){this.src='./covana-white.png';}" 
+           style="height: 38px; width: auto;" alt="COVANA Studio">
+      <span>• Case Study Portfolio</span>
+    </div>
+    <div>
+      © 2026 COVANA Studio. All Rights Reserved. Designed for Bharat Certis AgriScience Ltd.
+    </div>
+  </footer>
+
+  <!-- Accordion Script -->
+  <script>
+    const faqs = document.querySelectorAll('.faq-card');
+    faqs.forEach(card => {
+      const q = card.querySelector('.faq-question');
+      q.addEventListener('click', () => {
+        const active = card.classList.contains('active');
+        faqs.forEach(f => {
+          f.classList.remove('active');
+          f.querySelector('.faq-answer').style.maxHeight = null;
+        });
+        if (!active) {
+          card.classList.add('active');
+          const ans = card.querySelector('.faq-answer');
+          ans.style.maxHeight = ans.scrollHeight + "px";
+        }
+      });
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const first = document.querySelector('.faq-card.active .faq-answer');
+      if (first) first.style.maxHeight = first.scrollHeight + "px";
+
+      // Social Media Carousel Implementation
+      const carousels = document.querySelectorAll('.sm-media-viewport[data-carousel="true"]');
+      carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = carousel.querySelectorAll('.sm-dot');
+        const tag = carousel.querySelector('.sm-slide-tag');
+        const prevBtn = carousel.querySelector('.prev-btn');
+        const nextBtn = carousel.querySelector('.next-btn');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+          if (index < 0) index = slides.length - 1;
+          if (index >= slides.length) index = 0;
+          currentIndex = index;
+
+          slides.forEach((slide, idx) => {
+            slide.style.display = idx === currentIndex ? 'block' : 'none';
+          });
+          dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+          });
+          if (tag) tag.textContent = `${currentIndex + 1} / ${slides.length}`;
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+        dots.forEach((dot, idx) => {
+          dot.addEventListener('click', () => showSlide(idx));
+        });
+      });
+    });
+  </script>
+</body>
+</html>

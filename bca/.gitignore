@@ -1,0 +1,13 @@
+# Large zip archives, transfer folders, and Adobe Illustrator design source files that cause deployment failures
+*.zip
+*.ai
+TransferNow*
+
+# macOS junk metadata files
+._*
+.DS_Store
+
+# Uncompressed large video (deploy only the compressed web version)
+Video/BCA Logo Reveal  10-01-2025 v2 sfx.mp4
+
+.vercel

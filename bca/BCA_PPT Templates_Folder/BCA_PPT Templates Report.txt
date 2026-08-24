@@ -1,0 +1,84 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: BCA_PPT Templates.ai
+Color Mode: CMYK color
+Color Profile: U.S. Web Coated (SWOP) v2
+Ruler Units: points
+Artboard Dimensions: 1920 pt x 1080 pt
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Zona Pro Bold (OTF)
+Zona Pro Regular (OTF)
+Zona Pro ExtraLight (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+C:\Users\vasud\Downloads\BCA_PPT Templates_Folder\BCA_PPT Templates_Folder\Links\1000_F_868130110_V6SKoZ6QV7CiL4itEypiqRg0asLeLcGF.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1640K, 1000 by 560 pixels
+Dimensions: 628.884 by 352.175 points 
+Resolution: 114.489 by 114.489 pixels per inch
+
+
+C:\Users\vasud\Downloads\BCA_PPT Templates_Folder\BCA_PPT Templates_Folder\Links\1000_F_643517586_x0Pfg4hbUJr2kW2UtQeBUSHsGlScKp1O.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1280K, 1000 by 437 pixels
+Dimensions: 825.489 by 360.739 points 
+Resolution: 87.221 by 87.221 pixels per inch
+
+
+C:\Users\vasud\Downloads\BCA_PPT Templates_Folder\BCA_PPT Templates_Folder\Links\refreshment-from-as-sprinklers-arc-water-geometric-greenery-fields.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 73707K, 7095 by 3546 pixels
+Dimensions: 703.334 by 351.518 points 
+Resolution: 726.312 by 726.312 pixels per inch
+
+
+C:\Users\vasud\Downloads\BCA_PPT Templates_Folder\BCA_PPT Templates_Folder\Links\wheat-field-waving-wind-field-background.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 33249K, 4500 by 2522 pixels
+Dimensions: 1318.375 by 738.876 points 
+Resolution: 245.757 by 245.757 pixels per inch
+
+
+C:\Users\vasud\Downloads\BCA_PPT Templates_Folder\BCA_PPT Templates_Folder\Links\1000_F_699512891_Sj7LtRBIcam9cWt4ZmcJkNFxcEtaCnCU.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 1640K, 1000 by 560 pixels
+Dimensions: 617.217 by 345.641 points 
+Resolution: 116.653 by 116.653 pixels per inch
