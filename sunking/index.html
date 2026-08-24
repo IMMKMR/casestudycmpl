@@ -433,13 +433,29 @@
       }
     }
     
+    /* Masonry Grid */
+    .masonry-grid {
+      column-count: 3;
+      column-gap: 24px;
+    }
+    .masonry-grid > .img-box {
+      margin-bottom: 24px;
+      break-inside: avoid;
+      display: block; /* Overrides flex stretching */
+    }
+    .masonry-grid > .img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     /* Carousel */
     .carousel-container {
       display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
-      gap: 20px;
-      padding-bottom: 20px;
+      gap: 24px;
+      padding: 10px 0 30px;
       scrollbar-width: none;
       -ms-overflow-style: none;
     }
@@ -447,12 +463,17 @@
       display: none;
     }
     .carousel-item {
-      scroll-snap-align: start;
-      flex: 0 0 80%;
-      min-width: 300px;
-      max-width: 600px;
+      scroll-snap-align: center;
+      flex: 0 0 320px;
+      max-width: 85vw;
     }
     
+    @media (max-width: 1024px) {
+      .masonry-grid {
+        column-count: 2;
+      }
+    }
+
     @media (max-width: 768px) {
       .dual-grid, .triple-grid {
         grid-template-columns: 1fr;
@@ -638,7 +659,7 @@
       <p>Continuing the star-powered narrative across digital touchpoints and dealer networks.</p>
     </div>
     
-    <div class="triple-grid" style="margin-bottom: 0;">
+    <div class="masonry-grid" style="margin-bottom: 0;">
       <div class="img-box">
         <img src="Crreeatives/Ad-creative_01.jpg" alt="Ad Creative 1" />
       </div>
